@@ -6,173 +6,89 @@
 	<div class="footer clearfix">
 		<div class="row">
 			<div class="column column_1_3">
-				<h4 class="box_header">About PressRoom</h4>
-				<p class="padding_top_bottom_25">Maecenas mauris elementum, est
-					morbi interdum cursus at elite imperdiet libero. Proin odios
-					dapibus integer an nulla augue pharetra cursus.</p>
+				<h4 class="box_header">За нас</h4>
+				<p class="padding_top_bottom_25">Поинаков пристап на информации, медиумски портал со најнови вести од светот на технологијата, економијата, политиката и забавниот живот. Кога бараш нешто, барај на Барам.бе</p>
 				<div class="row">
 					<div class="column column_1_2">
-						<h5>PressRoom Ltd.</h5>
+						<h5>MKadvertising</h5>
 						<p>
-							33 Farlane Street<br> 25-100 Keilor East,<br> Australia
+							contact@baram.be
 						</p>
 					</div>
 					<div class="column column_1_2">
-						<h5>Phone &amp; Fax</h5>
+						
 						<p>
-							Phone: 1-800-64-38<br> Fax: 1-800-64-39
+							
 						</p>
 					</div>
 				</div>
-				<h4 class="box_header page_margin_top">Get In Touch With Us</h4>
+				<h4 class="box_header page_margin_top">Следетене на</h4>
 				<ul class="social_icons dark page_margin_top clearfix">
-					<li><a target="_blank" title=""
-						href="http://facebook.com/QuanticaLabs"
-						class="social_icon facebook"> &nbsp; </a></li>
-					<li><a target="_blank" title=""
-						href="https://twitter.com/QuanticaLabs"
-						class="social_icon twitter"> &nbsp; </a></li>
-					<li><a title="" href="mailto:contact@pressroom.com"
-						class="social_icon mail"> &nbsp; </a></li>
-					<li><a title="" href="#" class="social_icon skype"> &nbsp; </a></li>
+					<li><a target="_blank" href="https://www.facebook.com/baram.be"
+						class="social_icon facebook" title="facebook"> &nbsp; </a></li>
+					<li><a target="_blank" href="https://twitter.com/baram_be"
+						class="social_icon twitter" title="twitter"> &nbsp; </a></li>
+					<li><a href="mailto:contact@baram.be" class="social_icon mail"
+						title="mail"> &nbsp; </a></li>
+					<li><a title="" href="https://www.pinterest.com/barambe"
+						class="social_icon pinterest"> &nbsp; </a></li>
 					<li><a title=""
-						href="http://themeforest.net/user/QuanticaLabs?ref=QuanticaLabs"
-						class="social_icon envato"> &nbsp; </a></li>
-					<li><a title="" href="#" class="social_icon instagram"> &nbsp; </a>
-					</li>
-					<li><a title="" href="#" class="social_icon pinterest"> &nbsp; </a>
+						href="https://www.youtube.com/channel/UC7nhIyUFPOafr3sQtyQ6W3w"
+						class="social_icon youtube"> &nbsp; </a></li>
+					<li>
+						<div class="fb-like" data-href="https://www.facebook.com/baram.be/?fref=ts" data-width="100" style="margin-top: 5px; margin-left: 10px;" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
 					</li>
 				</ul>
 			</div>
 			<div class="column column_1_3">
-				<h4 class="box_header">Latest Posts</h4>
+				<h4 class="box_header">Последно</h4>
 				<div class="vertical_carousel_container clearfix">
 					<ul
 						class="blog small vertical_carousel autoplay-1 scroll-1 navigation-1 easing-easeInOutQuint duration-750">
-						<li class="post"><a href="?page=post_gallery"
-							title="Study Linking Illnes and Salt Leaves Researchers Doubtful">
-								<span class="icon small gallery"></span> <img
-								src='images/samples/100x100/image_06.jpg' alt='img'>
-						</a>
-							<div class="post_content">
-								<h5>
-									<a href="?page=post_gallery"
-										title="Study Linking Illnes and Salt Leaves Researchers Doubtful">Study
-										Linking Illnes and Salt Leaves Researchers Doubtful</a>
-								</h5>
-								<ul class="post_details simple">
-									<li class="category"><a href="?page=category&amp;cat=health"
-										title="HEALTH">HEALTH</a></li>
-									<li class="date">10:11 PM, Feb 02</li>
-								</ul>
-							</div></li>
-						<li class="post"><a href="?page=post"
-							title="Syrian Civilians Trapped For Months Continue To Be Evacuated">
-								<img src='images/samples/100x100/image_12.jpg' alt='img'>
-						</a>
-							<div class="post_content">
-								<h5>
-									<a href="?page=post"
-										title="Syrian Civilians Trapped For Months Continue To Be Evacuated">Syrian
-										Civilians Trapped For Months Continue To Be Evacuated</a>
-								</h5>
-								<ul class="post_details simple">
-									<li class="category"><a href="?page=category&amp;cat=world"
-										title="WORLD">WORLD</a></li>
-									<li class="date">10:11 PM, Feb 02</li>
-								</ul>
-							</div></li>
-						<li class="post"><a href="?page=post"
-							title="Built on Brotherhood, Club Lives Up to Name"> <img
-								src='images/samples/100x100/image_02.jpg' alt='img'>
-						</a>
-							<div class="post_content">
-								<h5>
-									<a href="?page=post"
-										title="Built on Brotherhood, Club Lives Up to Name">Built on
-										Brotherhood, Club Lives Up to Name</a>
-								</h5>
-								<ul class="post_details simple">
-									<li class="category"><a href="?page=category&amp;cat=sports"
-										title="SPORTS">SPORTS</a></li>
-									<li class="date">10:11 PM, Feb 02</li>
-								</ul>
-							</div></li>
-						<li class="post"><a href="?page=post"
-							title="Nuclear Fusion Closer to Becoming a Reality"> <img
-								src='images/samples/100x100/image_13.jpg' alt='img'>
-						</a>
-							<div class="post_content">
-								<h5>
-									<a href="?page=post"
-										title="Nuclear Fusion Closer to Becoming a Reality">Nuclear
-										Fusion Closer to Becoming a Reality</a>
-								</h5>
-								<ul class="post_details simple">
-									<li class="category"><a href="?page=category&amp;cat=science"
-										title="SCIENCE">SCIENCE</a></li>
-									<li class="date">10:11 PM, Feb 02</li>
-								</ul>
-							</div></li>
+												<?php
+			for($i = 0; $i < 10; $i ++) {
+				echo '<li class="post"><a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
+				echo 'title="' . $activePosts [$i]->title . '"> ';
+				echo '<img ';
+				echo 'src="' . $activePosts [$i]->path . '"  style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height: 100px; width: 100px; object-fit: cover;" alt="img"></a>' ;
+				echo '<div class="post_content"><h5> ';
+				echo '<a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '"  ';
+				echo 'title="' . $activePosts [$i]->title . '">' . $activePosts [$i]->title . '</a> </h5> ';
+				echo '<ul class="post_details simple"> ';
+				echo '<li class="category"><a href="?page=category&amp;cat=' . $activePosts [$i]->section . '" ';
+				echo 'title="' . $activePosts [$i]->section . '">' . $activePosts [$i]->section . '</a></li> ';
+				echo '<li class="date">' . date ( 'Y-m-d', strtotime ( $activePosts [$i]->created_at ) ) . '</li></ul></div></li> ';
+			}
+							?>
 					</ul>
 				</div>
 			</div>
 			<div class="column column_1_3">
-				<h4 class="box_header">Latest Galleries</h4>
+				<h4 class="box_header">18+</h4>
 				<div class="horizontal_carousel_container big page_margin_top">
 					<ul
-						class="blog horizontal_carousel visible-1 autoplay-0 scroll-1 navigation-1 easing-easeInOutQuint duration-750">
-						<li class="post"><a href="?page=post_gallery"
-							title="Struggling Nuremberg Sack Coach Verbeek"> <span
-								class="icon gallery"></span> <img
-								src='images/samples/330x242/image_03.jpg' alt='img'>
-						</a>
-							<h5 class="with_number">
-								<a href="?page=post_gallery"
-									title="Struggling Nuremberg Sack Coach Verbeek">Struggling
-									Nuremberg Sack Coach Verbeek</a> <a class="comments_number"
-									href="?page=post_gallery#comments_list" title="2 comments">2<span
-									class="arrow_comments"></span></a>
-							</h5>
-							<ul class="post_details simple">
-								<li class="category"><a href="?page=category&amp;cat=sports"
-									title="SPORTS">SPORTS</a></li>
-								<li class="date">10:11 PM, Feb 02</li>
-							</ul></li>
-						<li class="post"><a href="?page=post_gallery"
-							title="Built on Brotherhood, Club Lives Up to Name"> <span
-								class="icon gallery"></span> <img
-								src='images/samples/330x242/image_14.jpg' alt='img'>
-						</a>
-							<h5 class="with_number">
-								<a href="?page=post_gallery"
-									title="Built on Brotherhood, Club Lives Up to Name">Built on
-									Brotherhood, Club Lives Up to Name</a> <a
-									class="comments_number" href="?page=post_gallery#comments_list"
-									title="2 comments">2<span class="arrow_comments"></span></a>
-							</h5>
-							<ul class="post_details simple">
-								<li class="category"><a href="?page=category&amp;cat=sports"
-									title="SPORTS">SPORTS</a></li>
-								<li class="date">10:11 PM, Feb 02</li>
-							</ul></li>
-						<li class="post"><a href="?page=post_gallery"
-							title="New Painkiller Rekindles Addiction Concerns"> <span
-								class="icon gallery"></span> <img
-								src='images/samples/330x242/image_04.jpg' alt='img'>
-						</a>
-							<h5 class="with_number">
-								<a href="?page=post_gallery"
-									title="New Painkiller Rekindles Addiction Concerns">New
-									Painkiller Rekindles Addiction Concerns</a> <a
-									class="comments_number" href="?page=post_gallery#comments_list"
-									title="2 comments">2<span class="arrow_comments"></span></a>
-							</h5>
-							<ul class="post_details simple">
-								<li class="category"><a href="?page=category&amp;cat=sports"
-									title="SPORTS">SPORTS</a></li>
-								<li class="date">10:11 PM, Feb 02</li>
-							</ul></li>
+						class="blog horizontal_carousel visible-1 autoplay-1 scroll-1 navigation-1 easing-easeInOutQuint duration-750">
+						<?php
+						$no = 0;
+						for($i = 0; $i < count($activePosts); $i ++) {
+							if($no == 10){
+								break;
+							}
+							if( mb_strtolower($activePosts [$i]->section) == mb_strtolower('18+')){
+						echo '<li class="post"><a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
+						echo 'title="' . $activePosts [$i]->title . '"><img class="erotic-foggy" ';
+						echo 'src="' . $activePosts [$i]->path . '" onmouseover="disableFoggy(this);" onmouseout="enableFoggy(this);" style="height: 242px; width: 330px; object-fit: cover;" alt="img"> </a> '; //330 x 242
+						echo '<h5 class="with_number"><a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
+						echo 'title="' . $activePosts [$i]->title . '">' . $activePosts [$i]->title . '</a> ';
+						//echo '<a class="comments_number" href="?page=post_gallery#comments_list" title="2 comments">2<span	class="arrow_comments"></span></a> ';
+						echo '</h5><ul class="post_details simple"> ';
+						echo '<li class="category"><a href="?page=category&amp;cat=' . $activePosts [$i]->section . '" ';
+						echo 'title="' . $activePosts [$i]->section . '">' . $activePosts [$i]->section . '</a></li>';
+						echo '<li class="date">' . date ( 'Y-m-d', strtotime ( $activePosts [$i]->created_at ) ) . '</li></ul></li>';
+						$no++;
+							}
+						}
+							?>
 					</ul>
 				</div>
 			</div>
@@ -180,63 +96,50 @@
 		<div class="row page_margin_top_section">
 			<div class="column column_3_4">
 				<ul class="footer_menu">
-					<li>
-						<h4>
-							<a href="?page=category&amp;cat=world" title="World">World</a>
-						</h4>
-					</li>
-					<li>
-						<h4>
-							<a href="?page=category&amp;cat=health" title="Health">Health</a>
-						</h4>
-					</li>
-					<li>
-						<h4>
-							<a href="?page=category&amp;cat=sports" title="Sports">Sports</a>
-						</h4>
-					</li>
-					<li>
-						<h4>
-							<a href="?page=category&amp;cat=science" title="Science">Science</a>
-						</h4>
-					</li>
-					<li>
-						<h4>
-							<a href="?page=category&amp;cat=lifestyle" title="Lifestyle">Lifestyle</a>
-						</h4>
-					</li>
+					<h4><li class="menu"><a href="?page=home" title="Дома"> Дома </a></li></h5>
+		<h5><li class="menu"><a href="?page=post&amp;cat=Македонија" title="Македонија"> Македонија </a></li></h5>
+		<h5><li class="menu"><a href="?page=post&amp;cat=Економија" title="Економија"> Економија </a></li></h5>
+		<h5><li class="menu"><a href="?page=post&amp;cat=Свет" title="Свет"> Свет </a></li></h5>
+		<h5><li class="menu"><a href="?page=post&amp;cat=Хроника" title="Хроника"> Хроника </a></li></h5>
+		<h5><li class="menu"><a href="?page=post&amp;cat=Спорт" title="Спорт"> Спорт </a></li></h5>
+		<h5><li class="menu"><a href="?page=post&amp;cat=Забава" title="Забава"> Забава </a></li></h5>
+		<h5><li class="menu"><a href="?page=post&amp;cat=Култура" title="Култура"> Култура </a></li></h5>
+		<h5><li class="menu"><a href="?page=post&amp;cat=18+" title="18+"> 18+ </a></li></h5>
 				</ul>
 			</div>
 			<div class="column column_1_4">
-				<a class="scroll_top" href="#top" title="Scroll to top">Top</a>
+				<h5><a class="scroll_top" href="#top" title="Scroll to top">Назад</a></h5>
 			</div>
 		</div>
 		<div class="row copyright_row">
 			<div class="column column_2_3">© Copyright MKadvertising</div>
-			<div class="column column_1_3">
-				<ul class="footer_menu">
-					<li>
-						<h6>
-							<a href="?page=about" title="About">About</a>
-						</h6>
-					</li>
-					<li>
-						<h6>
-							<a href="?page=authors" title="Authors">Authors</a>
-						</h6>
-					</li>
-					<li>
-						<h6>
-							<a href="?page=contact" title="Contact Us">Contact Us</a>
-						</h6>
-					</li>
-				</ul>
-			</div>
+			<?php
+			// <div class="column column_1_3">
+			// 	<ul class="footer_menu">
+			// 		<li>
+			// 			<h6>
+			// 				<a href="?page=about" title="About">About</a>
+			// 			</h6>
+			// 		</li>
+			// 		<li>
+			// 			<h6>
+			// 				<a href="?page=authors" title="Authors">Authors</a>
+			// 			</h6>
+			// 		</li>
+			// 		<li>
+			// 			<h6>
+			// 				<a href="?page=contact" title="Contact Us">Contact Us</a>
+			// 			</h6>
+			// 		</li>
+			// 	</ul>
+			// </div>
+			?>
 		</div>
 	</div>
 </div>
 </div>
 <div class="background_overlay"></div>
+
 <!--js-->
 <script src="/js/app.js"></script>
 <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
@@ -259,7 +162,26 @@
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/odometer.min.js"></script>
 <script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="/js/jquery.foggy.min.js"></script>
 
+<script>
+$('.erotic-foggy').foggy({
+   blurRadius: 5,          // In pixels.
+   opacity: 2,           // Falls back to a filter for IE.
+   cssFilterSupport: true  // Use "-webkit-filter" where available.
+ }); 
+
+ function disableFoggy(elem){
+	 $(elem).foggy(false);
+ }
+ function enableFoggy(elem){
+	 $(elem).foggy({
+   blurRadius: 5,          // In pixels.
+   opacity: 2,           // Falls back to a filter for IE.
+   cssFilterSupport: true  // Use "-webkit-filter" where available.
+ }); 
+ }
+</script>
 <br>
 <br>
 <br>

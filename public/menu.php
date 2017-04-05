@@ -1,9 +1,21 @@
 <nav>
 	<ul class="sf-menu">
-		<li class="menu" style="float: right;"><a href="#" role="button" data-toggle="modal" data-target="#login-modal">Логирај се</a>
+		<?php
+		// <li class="menu" style="float: right;"><a href="#" role="button" data-toggle="modal" data-target="#login-modal">Логирај се</a>
+		// 		</li>
+				?>
+						<li class="menu" style="float: right;"><a href="/baram" title="Baram.be"> Барам бе </a>
 				</li>
-		<li class="menu"><a href="?page=home" title="Home"> Дома </a></li>
-		<li class="submenu mega_menu_parent"><a href="#" title="Mega Menu">
+		<li class="menu"><a href="?page=home" title="Дома"> Дома </a></li>
+		<li class="menu"><a href="?page=post&amp;cat=Македонија" title="Македонија"> Македонија </a></li>
+		<li class="menu"><a href="?page=post&amp;cat=Економија" title="Економија"> Економија </a></li>
+		<li class="menu"><a href="?page=post&amp;cat=Свет" title="Свет"> Свет </a></li>
+		<li class="menu"><a href="?page=post&amp;cat=Хроника" title="Хроника"> Хроника </a></li>
+		<li class="menu"><a href="?page=post&amp;cat=Спорт" title="Спорт"> Спорт </a></li>
+		<li class="menu"><a href="?page=post&amp;cat=Забава" title="Забава"> Забава </a></li>
+		<li class="menu"><a href="?page=post&amp;cat=Култура" title="Култура"> Култура </a></li>
+		<li class="menu"><a href="?page=post&amp;cat=18+" title="18+"> 18+ </a></li>
+		<!--<li class="submenu mega_menu_parent"><a href="#" title="Mega Menu">
 				Mega Menu </a>
 			<ul>
 				<li class="submenu"><a href="?page=blog" title="Latest Posts">
@@ -302,8 +314,8 @@
 							</ul>
 						</div>
 					</div></li>
-			</ul></li>
-		<li
+			</ul></li>-->
+		<!--<li
 			class="submenu<?php echo ($_GET["page"]=="post" || $_GET["page"]=="post_gallery" || $_GET["page"]=="post_small_image" || $_GET["page"]=="post_video" || $_GET["page"]=="post_video_2" || $_GET["page"]=="post_soundcloud" || $_GET["page"]=="post_review" || $_GET["page"]=="post_review_2" || $_GET["page"]=="post_quote" || $_GET["page"]=="post_quote_2" ? " selected" : ""); ?>">
 			<a href="#" title="Post Formats"> Post Formats </a>
 			<ul>
@@ -356,8 +368,8 @@
 						Style 2 </a>
 				</li>
 			</ul>
-		</li>
-		<li
+		</li>-->
+		<!--<li
 			class="submenu<?php echo ($_GET["page"]=="blog" || $_GET["page"]=="blog_small_slider" || $_GET["page"]=="blog_left_sidebar" || $_GET["page"]=="blog_2_columns" || $_GET["page"]=="blog_2_columns_left_sidebar" || $_GET["page"]=="blog_3_columns" || $_GET["page"]=="search" ? " selected" : ""); ?>">
 			<a href="?page=blog" title="Blog"> Blog </a>
 			<ul>
@@ -409,9 +421,9 @@
 					title="Search Page Template"> Search Page Template </a>
 				</li>
 			</ul>
-		</li>
-		<li class="menu"><a href="?page=authors" title="Users"> Корисници </a>
-	
+		</li>-->
+		<!--<li class="menu"><a href="?page=authors" title="Users"> Корисници </a>-->
+
 	</ul>
 </nav>
 <div class="mobile_menu_container">
@@ -421,15 +433,20 @@
 	<div class="mobile-menu-divider"></div>
 	<nav>
 		<ul class="mobile-menu">
-			<li class="menu" style="float: right;"><a href="javascript:void(0)">Логирај
-					се</a></li>
-			<li class="submenu"><a href="javascript:void(0)" title="Menu"> Мени </a>
 				<ul>
-					<li class="menu"><a href="?page=home" title="Home"> Дома </a></li>
-					<li class="menu"><a href="?page=authors" title="Users"> Корисници </a>
-					</li>
-					<li class="menu"><a href="?page=contact" title="Contact"> Контакт </a>
-					</li>
+					<li class="menu"><a href="?page=home" title="Дома"> Дома </a></li>
+					<li class="menu"><a href="?page=post&amp;cat=Македонија" title="Македонија"> Македонија </a></li>
+		<li class="menu"><a href="?page=post&amp;cat=Економија" title="Економија"> Економија </a></li>
+		<li class="menu"><a href="?page=post&amp;cat=Свет" title="Свет"> Свет </a></li>
+		<li class="menu"><a href="?page=post&amp;cat=Хроника" title="Хроника"> Хроника </a></li>
+		<li class="menu"><a href="?page=post&amp;cat=Спорт" title="Спорт"> Спорт </a></li>
+		<li class="menu"><a href="?page=post&amp;cat=Забава" title="Забава"> Забава </a></li>
+		<li class="menu"><a href="?page=post&amp;cat=Култура" title="Култура"> Култура </a></li>
+		<li class="menu"><a href="/baram" title="Baram.be"> Барам бе </a></li>
+					<!--<li class="menu"><a href="?page=authors" title="Users"> Корисници </a>
+					</li>-->
+					<!--<li class="menu"><a href="?page=contact" title="Contact"> Контакт </a>
+					</li>-->
 				</ul></li>
 		</ul>
 	</nav>

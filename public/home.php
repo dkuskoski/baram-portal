@@ -11,7 +11,7 @@
 				echo '</a> ';
 				echo '<div class="slider_content_box"> ';
 				echo '<ul class="post_details simple"> ';
-				echo '<li class="category"><a href="?page=category&amp;cat=health" '; // TODO
+				echo '<li class="category"><a href="?page=category&amp;cat=' . $activePosts [$i]->section . '" ';
 				echo 'title="' . $activePosts [$i]->section . '">' . $activePosts [$i]->section . '</a></li> ';
 				echo '<li class="date">' . date ( 'Y-m-d', strtotime ( $activePosts [$i]->created_at ) ) . '</li> ';
 				echo '</ul> ';
@@ -53,7 +53,7 @@
 				echo '<a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" title="' . $activePosts [$i]->title . '">' . $activePosts [$i]->title . '</a> ';
 				echo '</h5> ';
 				echo '<ul class="post_details simple"> ';
-				echo '<li class="category"><a href="?page=category&amp;cat=health" '; // TODO
+				echo '<li class="category"><a href="?page=category&amp;cat=' . $activePosts [$i]->section . '" ';
 				echo 'title="' . $activePosts [$i]->section . '">' . $activePosts [$i]->section . '</a></li> ';
 				echo '<li class="date">' . date ( 'Y-m-d', strtotime ( $activePosts [$i]->created_at ) ) . '</li> ';
 				echo '</ul></li>';
@@ -77,7 +77,7 @@
 									title="<?php echo $activePosts [1]->title;?>"><?php echo $activePosts [1]->title;?></a>
 							</h5>
 							<ul class="post_details simple">
-								<li class="category"><a href="?page=category&amp;cat=lifestyle"
+								<li class="category"><a href="?page=category&amp;cat=<?php echo $activePosts [1]->section; ?>"
 									title="<?php echo $activePosts [1]->section;?>"><?php echo $activePosts [1]->section;?></a></li>
 								<li class="date"><?php date ( 'Y-m-d', strtotime ( $activePosts [1]->created_at ) )?></li>
 							</ul>
@@ -120,7 +120,7 @@
 									title="<?php echo $activePosts [$no]->title;?>"><?php echo $activePosts [$no]->title;?></a>
 							</h5>
 							<ul class="post_details simple">
-								<li class="category"><a href="?page=category&amp;cat=lifestyle"
+								<li class="category"><a href="?page=category&amp;cat=<?php echo $activePosts [$no]->section;?>"
 									title="<?php echo $activePosts [$no]->section;?>"><?php echo $activePosts [$no]->section;?></a></li>
 								<li class="date"><?php date ( 'Y-m-d', strtotime ( $activePosts [$no]->created_at ) )?></li>
 							</ul>
@@ -166,7 +166,7 @@
 							title="' . $activePosts [$i]->title . '">' . $activePosts [$i]->title . '</a>
 					</h5>
 					<ul class="post_details simple">
-						<li class="category"><a href="?page=category&amp;cat=health"
+						<li class="category"><a href="?page=category&amp;cat=' . $activePosts [$i]->section . '"
 							title="' . $activePosts [$i]->section . '">' . $activePosts [$i]->section . '</a></li>
 						<li class="date">' . date ( 'Y-m-d', strtotime ( $activePosts [$i]->created_at ) ) . '</li>
 					</ul></li>';
@@ -197,7 +197,7 @@
 				</h2>
 				<ul class="post_details"
 					style="margin-bottom: 10px; width: 100% !important;">
-					<li class="category"><a href="?page=category&amp;cat=sports"
+					<li class="category"><a href="?page=category&amp;cat=<?php echo $activePosts [5]->section; ?>"
 						title="<?php echo $activePosts[5]->section; // TODO 5 > 21 ?>"><?php echo $activePosts[5]->section; // TODO 5 > 21 ?></a></li>
 					<li class="date"><?php echo date('Y-m-d', strtotime($activePosts[5]->created_at)); // TODO 5 > 21 ?></li>
 				</ul>
@@ -206,41 +206,45 @@
 				href="<?php echo '?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [5]->id . '-' . str_replace ( ' ', '_', $activePosts [5]->title ); //TODO 5 21?>"
 				title="Read more"><span class="arrow"></span><span>Повеке</span></a></li>
 		</ul>
-		<ul class="blog small clearfix">
-			<li class="post"><a href="?page=post_small_image"
-				title="Bayern Says Ties With Rivals Dortmund Have Frozen"> <img
-					src='images/samples/100x100/image_14.jpg' alt='img'>
-			</a>
-				<div class="post_content">
-					<h5>
-						<a href="?page=post_small_image"
-							title="Bayern Says Ties With Rivals Dortmund Have Frozen">Bayern
-							Says Ties With Rivals Dortmund Have Frozen</a>
-					</h5>
-					<ul class="post_details simple">
-						<li class="category"><a href="?page=category&amp;cat=sports"
-							title="SPORTS">SPORTS</a></li>
-						<li class="date">10:11 PM, Feb 02</li>
-					</ul>
-				</div></li>
-			<li class="post"><a href="?page=post_soundcloud"
-				title="Built on Brotherhood, Club Lives Up to Name"> <img
-					src='images/samples/100x100/image_12.jpg' alt='img'>
-			</a>
-				<div class="post_content">
-					<h5>
-						<a href="?page=post_soundcloud"
-							title="Built on Brotherhood, Club Lives Up to Name">Built on
-							Brotherhood, Club Lives Up to Name</a>
-					</h5>
-					<ul class="post_details simple">
-						<li class="category"><a href="?page=category&amp;cat=sports"
-							title="SPORTS">SPORTS</a></li>
-						<li class="date">10:11 PM, Feb 02</li>
-					</ul>
-				</div></li>
-		</ul>
-		<a class="more page_margin_top" href="#">READ MORE</a>
+		<?php
+		// <ul class="blog small clearfix">
+		// 	<li class="post"><a href="?page=post_small_image"
+		// 		title="Bayern Says Ties With Rivals Dortmund Have Frozen"> <img
+		// 			src='images/samples/100x100/image_14.jpg' alt='img'>
+		// 	</a>
+		// 		<div class="post_content">
+		// 			<h5>
+		// 				<a href="?page=post_small_image"
+		// 					title="Bayern Says Ties With Rivals Dortmund Have Frozen">Bayern
+		// 					Says Ties With Rivals Dortmund Have Frozen</a>
+		// 			</h5>
+		// 			<ul class="post_details simple">
+		// 				<li class="category"><a href="?page=category&amp;cat=sports"
+		// 					title="SPORTS">SPORTS</a></li>
+		// 				<li class="date">10:11 PM, Feb 02</li>
+		// 			</ul>
+		// 		</div></li>
+		// 	<li class="post"><a href="?page=post_soundcloud"
+		// 		title="Built on Brotherhood, Club Lives Up to Name"> <img
+		// 			src='images/samples/100x100/image_12.jpg' alt='img'>
+		// 	</a>
+		// 		<div class="post_content">
+		// 			<h5>
+		// 				<a href="?page=post_soundcloud"
+		// 					title="Built on Brotherhood, Club Lives Up to Name">Built on
+		// 					Brotherhood, Club Lives Up to Name</a>
+		// 			</h5>
+		// 			<ul class="post_details simple">
+		// 				<li class="category"><a href="?page=category&amp;cat=sports"
+		// 					title="SPORTS">SPORTS</a></li>
+		// 				<li class="date">10:11 PM, Feb 02</li>
+		// 			</ul>
+		// 		</div></li>
+		// </ul>
+		?>
+		<?php
+		// <a class="more page_margin_top" href="#">READ MORE</a>
+		?>
 	</div>
 	<div class="column column_1_3">
 		<h4 class="box_header"><?php echo $activePosts[6]->section; // TODO 6 > 22 ?></h4>
@@ -262,7 +266,7 @@
 				</h2>
 				<ul class="post_details"
 					style="margin-bottom: 10px; width: 100% !important;">
-					<li class="category"><a href="?page=category&amp;cat=sports"
+					<li class="category"><a href="?page=category&amp;cat=<?php echo $activePosts [6]->section; ?>"
 						title="<?php echo $activePosts[6]->section; // TODO 6 > 22 ?>"><?php echo $activePosts[6]->section; // TODO 6 > 21 ?></a></li>
 					<li class="date"><?php echo date('Y-m-d', strtotime($activePosts[6]->created_at)); // TODO 6 > 21 ?></li>
 				</ul>
@@ -271,112 +275,73 @@
 				href="<?php echo '?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [6]->id . '-' . str_replace ( ' ', '_', $activePosts [6]->title ); // TODO 6 22?>"
 				title="Read more"><span class="arrow"></span><span>Повеке</span></a></li>
 		</ul>
-		<ul class="blog small clearfix">
-			<li class="post"><a href="?page=post"
-				title="Bayern Says Ties With Rivals Dortmund Have Frozen"> <img
-					src='images/samples/100x100/image_01.jpg' alt='img'>
-			</a>
-				<div class="post_content">
-					<h5>
-						<a href="?page=post"
-							title="Bayern Says Ties With Rivals Dortmund Have Frozen">Bayern
-							Says Ties With Rivals Dortmund Have Frozen</a>
-					</h5>
-					<ul class="post_details simple">
-						<li class="category"><a href="?page=category&amp;cat=lifestyle"
-							title="LIFESTYLE">LIFESTYLE</a></li>
-						<li class="date">10:11 PM, Feb 02</li>
-					</ul>
-				</div></li>
-			<li class="post"><a href="?page=post_video"
-				title="Built on Brotherhood, Club Lives Up to Name"> <span
-					class="icon small video"></span> <img
-					src='images/samples/100x100/image_03.jpg' alt='img'>
-			</a>
-				<div class="post_content">
-					<h5>
-						<a href="?page=post_video"
-							title="Built on Brotherhood, Club Lives Up to Name">Built on
-							Brotherhood, Club Lives Up to Name</a>
-					</h5>
-					<ul class="post_details simple">
-						<li class="category"><a href="?page=category&amp;cat=lifestyle"
-							title="LIFESTYLE">LIFESTYLE</a></li>
-						<li class="date">10:11 PM, Feb 02</li>
-					</ul>
-				</div></li>
-		</ul>
-		<a class="more page_margin_top" href="#">READ MORE</a>
+		<?php
+		// <ul class="blog small clearfix">
+		// 	<li class="post"><a href="?page=post"
+		// 		title="Bayern Says Ties With Rivals Dortmund Have Frozen"> <img
+		// 			src='images/samples/100x100/image_01.jpg' alt='img'>
+		// 	</a>
+		// 		<div class="post_content">
+		// 			<h5>
+		// 				<a href="?page=post"
+		// 					title="Bayern Says Ties With Rivals Dortmund Have Frozen">Bayern
+		// 					Says Ties With Rivals Dortmund Have Frozen</a>
+		// 			</h5>
+		// 			<ul class="post_details simple">
+		// 				<li class="category"><a href="?page=category&amp;cat=lifestyle"
+		// 					title="LIFESTYLE">LIFESTYLE</a></li>
+		// 				<li class="date">10:11 PM, Feb 02</li>
+		// 			</ul>
+		// 		</div></li>
+		// 	<li class="post"><a href="?page=post_video"
+		// 		title="Built on Brotherhood, Club Lives Up to Name"> <span
+		// 			class="icon small video"></span> <img
+		// 			src='images/samples/100x100/image_03.jpg' alt='img'>
+		// 	</a>
+		// 		<div class="post_content">
+		// 			<h5>
+		// 				<a href="?page=post_video"
+		// 					title="Built on Brotherhood, Club Lives Up to Name">Built on
+		// 					Brotherhood, Club Lives Up to Name</a>
+		// 			</h5>
+		// 			<ul class="post_details simple">
+		// 				<li class="category"><a href="?page=category&amp;cat=lifestyle"
+		// 					title="LIFESTYLE">LIFESTYLE</a></li>
+		// 				<li class="date">10:11 PM, Feb 02</li>
+		// 			</ul>
+		// 		</div></li>
+		// </ul>
+		?>
+		<?php
+		// <a class="more page_margin_top" href="#">READ MORE</a>
+		?>
 	</div>
 	<div class="column column_1_3">
-		<h4 class="box_header">Science</h4>
+		<h4 class="box_header"><?php echo $activePosts [0]->section; ?></h4>
 		<ul class="blog small clearfix">
-			<li class="post"><a href="?page=post"
-				title="Study Linking Illnes and Salt Leaves Researchers Doubtful"> <img
-					src='images/samples/100x100/image_09.jpg' alt='img'>
-			</a>
-				<div class="post_content">
-					<h5>
-						<a href="?page=post"
-							title="Study Linking Illnes and Salt Leaves Researchers Doubtful">Study
-							Linking Illnes and Salt Leaves Researchers Doubtful</a>
-					</h5>
-					<ul class="post_details simple">
-						<li class="category"><a href="?page=category&amp;cat=science"
-							title="SCIENCE">SCIENCE</a></li>
-						<li class="date">10:11 PM, Feb 02</li>
-					</ul>
-				</div></li>
-			<li class="post"><a href="?page=post"
-				title="Syrian Civilians Trapped For Months Continue To Be Evacuated">
-					<img src='images/samples/100x100/image_12.jpg' alt='img'>
-			</a>
-				<div class="post_content">
-					<h5>
-						<a href="?page=post"
-							title="Syrian Civilians Trapped For Months Continue To Be Evacuated">Syrian
-							Civilians Trapped For Months Continue To Be Evacuated</a>
-					</h5>
-					<ul class="post_details simple">
-						<li class="category"><a href="?page=category&amp;cat=science"
-							title="SCIENCE">SCIENCE</a></li>
-						<li class="date">10:11 PM, Feb 02</li>
-					</ul>
-				</div></li>
-			<li class="post"><a href="?page=post"
-				title="Built on Brotherhood, Club Lives Up to Name"> <img
-					src='images/samples/100x100/image_02.jpg' alt='img'>
-			</a>
-				<div class="post_content">
-					<h5>
-						<a href="?page=post"
-							title="Built on Brotherhood, Club Lives Up to Name">Built on
-							Brotherhood, Club Lives Up to Name</a>
-					</h5>
-					<ul class="post_details simple">
-						<li class="category"><a href="?page=category&amp;cat=science"
-							title="SCIENCE">SCIENCE</a></li>
-						<li class="date">10:11 PM, Feb 02</li>
-					</ul>
-				</div></li>
-			<li class="post"><a href="?page=post_gallery"
-				title="Nuclear Fusion Closer to Becoming a Reality"> <span
-					class="icon small gallery"></span> <img
-					src='images/samples/100x100/image_01.jpg' alt='img'>
-			</a>
-				<div class="post_content">
-					<h5>
-						<a href="?page=post_gallery"
-							title="Nuclear Fusion Closer to Becoming a Reality">Nuclear
-							Fusion Closer to Becoming a Reality</a>
-					</h5>
-					<ul class="post_details simple">
-						<li class="category"><a href="?page=category&amp;cat=science"
-							title="SCIENCE">SCIENCE</a></li>
-						<li class="date">10:11 PM, Feb 02</li>
-					</ul>
-				</div></li>
+		<?php
+		$no = 0;
+						for($i = 0; $i < count($activePosts); $i ++) {
+							if($no == 4){
+								break;
+							}
+							if( mb_strtolower($activePosts [$i]->section) == mb_strtolower($activePosts [0]->section)){
+			echo '<li class="post"><a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
+			echo 'title="' . $activePosts [$i]->title . '"> <img ';
+			echo 'src="' . $activePosts [$i]->path . '" style="height: 100px; width: 100px; object-fit: cover;" alt="img"></a> ';
+			echo '<div class="post_content"><h5> ';
+			echo '<a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
+			echo 'title="' . $activePosts [$i]->title . '">' . $activePosts [$i]->title . '</a></h5><ul class="post_details simple"> ';
+			echo '<li class="category"><a href="?page=category&amp;cat=' . $activePosts [$i]->section . '" ';
+			echo 'title="' . $activePosts [$i]->section . '">' . $activePosts [$i]->section . '</a></li> ';
+			echo '<li class="date">' . date ( 'Y-m-d', strtotime ( $activePosts [$i]->created_at ) ) . '</li></ul></div></li> ';
+							$no++;
+							}
+						}
+				?>
 		</ul>
-		<a class="more page_margin_top" href="#">MORE FROM SCIENCE</a>
+		<?php
+		// <a class="more page_margin_top" href="#">MORE FROM SCIENCE</a>
+		?>
 	</div>
 </div>

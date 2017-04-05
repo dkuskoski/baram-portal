@@ -46,6 +46,16 @@
 </head>
 <body class="image_2">
 	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89081951-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script>
 window.fbAsyncInit = function() {
 FB.init({
 appId : '683421731799698',
@@ -62,13 +72,13 @@ e.async = true;
 document.getElementById('fb-root2').appendChild(e);
 }());
 </script>
-	<div id="fb-root2"></div>
-	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 	<br>
@@ -86,11 +96,7 @@ document.getElementById('fb-root2').appendChild(e);
 				<!-- <ul class="social_icons dark clearfix"> -->
 				<ul class="social_icons colors clearfix">
 					<li>
-						<div class="fb-like"
-							data-href="https://www.facebook.com/baram.be/?fref=ts"
-							data-width="50" style="margin-top: 5px;"
-							data-layout="button_count" data-action="like"
-							data-show-faces="true" data-share="true"></div>
+						<div class="fb-like" data-href="https://www.facebook.com/baram.be/?fref=ts" data-width="100" style="margin-top: 5px;" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
 					</li>
 					<li><a target="_blank" href="https://www.facebook.com/baram.be"
 						class="social_icon facebook" title="facebook"> &nbsp; </a></li>

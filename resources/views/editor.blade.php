@@ -79,7 +79,7 @@
 							<option value="Спорт">Спорт</option>
 							<option selected value="Забава">Забава</option>
 							<option value="Култура">Култура</option>
-							<option value="Еротика 18+">Еротика 18+</option>
+							<option value="18+">18+</option>
 						</select>
 					</div>
 					<div class="col-xs-12">
