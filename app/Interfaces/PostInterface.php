@@ -17,5 +17,7 @@ interface PostInterface {
 
 	function getMostViewed($count);
 
-	function getBySection($section);
+	function getBySection($section, $end);
+
+	function getCountBySection($section);
 }

@@ -162,7 +162,8 @@
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/odometer.min.js"></script>
 <script type="text/javascript" src="js/login.js"></script>
-<script type="text/javascript" src="/js/jquery.foggy.min.js"></script>
+<script type="text/javascript" src="js/jquery.foggy.min.js"></script>
+<script type="text/javascript" src="js/jquery.twbsPagination.min.js"></script>
 
 <script>
 $('.erotic-foggy').foggy({

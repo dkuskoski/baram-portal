@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 class PostDAO implements PostInterface {
 
     public function getActivePosts(){
-        $items = DB::select("SELECT * FROM posts where status = 1 order by created_at desc");
+        $items = DB::select("SELECT * FROM posts where status = 1 order by created_at desc limit 100");
         return $items;
     }
 
@@ -38,8 +38,14 @@ class PostDAO implements PostInterface {
 		return $items;
 	}
 
-	function getBySection($section){
-		$items = DB::select("SELECT * FROM posts WHERE section = '" . $section . "' and status = 1 order by created_at desc");
+	function getBySection($section, $end){
+		$start = $end - 6;
+		$items = DB::select("SELECT * FROM posts WHERE section = '" . $section . "' and status = 1 order by created_at desc limit " . $end . ' offset ' . $start);
 		return $items;
+	}
+
+	function getCountBySection($section){
+		$posts = DB::table('posts')->count();
+		return $posts;
 	}
 }

@@ -38,10 +38,11 @@ class HomeController extends Controller {
 				$id = explode('-', substr($_GET['title'], 5))[0];
 				$post = $this->postService->getPostById($id);
 			}
-
+			$categoryPostsCount = 0;
 			$categoryPosts = null;
 			if($_GET['page'] == 'category'){
-				$categoryPosts = $this->postService->getBySection($_GET['cat']);
+				$categoryPosts = $this->postService->getBySection($_GET['cat'], 6);
+				$categoryPostsCount = $this->postService->getCountBySection($_GET['cat']);
 			}
 		}
 		$mostViewed = $this->postService->getMostViewed(5);
@@ -52,7 +53,8 @@ class HomeController extends Controller {
 					'activePosts' => $activePosts,
 					'mostViewed' => $mostViewed,
 					'post' => $post,
-					'categoryPosts' => $categoryPosts
+					'categoryPosts' => $categoryPosts,
+					'categoryPostsCount' => $categoryPostsCount
 			] );
 		} else {
 			return view ( 'portal/index', [ 
@@ -61,5 +63,10 @@ class HomeController extends Controller {
 					'post' => $post
 			] );
 		}
+	}
+
+	public function getPosts(){
+		$categoryPosts = $this->postService->getBySection($_GET['cat'], $_GET['count']);
+		return $categoryPosts;
 	}
 }

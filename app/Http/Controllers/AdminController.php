@@ -74,7 +74,7 @@ class AdminController extends Controller {
 			$post->content = $content;
 			$post->section = $request ['section'];
 			$post->status = 1;
-			$post->views = rand ( 50, 150 );
+			$post->views = rand ( 12, 155 );
 			$post->title = $request ['title'];
 			$post->path = $request ['thumbnail'];
 			$post->author_id = Auth::user ()->id;

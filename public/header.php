@@ -27,6 +27,8 @@
 <link rel="stylesheet" type="text/css"
 	href="style/odometer-theme-default.css">
 
+	<script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+
 <!--<link rel="stylesheet" type="text/css" href="style/dark_skin.css">-->
 <!--<link rel="stylesheet" type="text/css" href="style/high_contrast_skin.css">-->
 <link rel="shortcut icon" href="images/favicon.ico">
