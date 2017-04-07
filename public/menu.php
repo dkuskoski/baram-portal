@@ -7,14 +7,14 @@
 						<li class="menu" style="float: right;"><a href="/baram" title="Baram.be"> Барам бе </a>
 				</li>
 		<li class="menu"><a href="?page=home" title="Дома"> Дома </a></li>
-		<li class="menu"><a href="?page=post&amp;cat=Македонија" title="Македонија"> Македонија </a></li>
-		<li class="menu"><a href="?page=post&amp;cat=Економија" title="Економија"> Економија </a></li>
-		<li class="menu"><a href="?page=post&amp;cat=Свет" title="Свет"> Свет </a></li>
-		<li class="menu"><a href="?page=post&amp;cat=Хроника" title="Хроника"> Хроника </a></li>
-		<li class="menu"><a href="?page=post&amp;cat=Спорт" title="Спорт"> Спорт </a></li>
-		<li class="menu"><a href="?page=post&amp;cat=Забава" title="Забава"> Забава </a></li>
-		<li class="menu"><a href="?page=post&amp;cat=Култура" title="Култура"> Култура </a></li>
-		<li class="menu"><a href="?page=post&amp;cat=18+" title="18+"> 18+ </a></li>
+		<li class="menu"><a href="?page=category&amp;cat=Македонија" title="Македонија"> Македонија </a></li>
+		<li class="menu"><a href="?page=category&amp;cat=Економија" title="Економија"> Економија </a></li>
+		<li class="menu"><a href="?page=category&amp;cat=Свет" title="Свет"> Свет </a></li>
+		<li class="menu"><a href="?page=category&amp;cat=Хроника" title="Хроника"> Хроника </a></li>
+		<li class="menu"><a href="?page=category&amp;cat=Спорт" title="Спорт"> Спорт </a></li>
+		<li class="menu"><a href="?page=category&amp;cat=Забава" title="Забава"> Забава </a></li>
+		<li class="menu"><a href="?page=category&amp;cat=Култура" title="Култура"> Култура </a></li>
+		<li class="menu"><a href="?page=category&amp;cat=18+" title="18+"> 18+ </a></li>
 		<!--<li class="submenu mega_menu_parent"><a href="#" title="Mega Menu">
 				Mega Menu </a>
 			<ul>
@@ -435,13 +435,13 @@
 		<ul class="mobile-menu">
 				<ul>
 					<li class="menu"><a href="?page=home" title="Дома"> Дома </a></li>
-					<li class="menu"><a href="?page=post&amp;cat=Македонија" title="Македонија"> Македонија </a></li>
-		<li class="menu"><a href="?page=post&amp;cat=Економија" title="Економија"> Економија </a></li>
-		<li class="menu"><a href="?page=post&amp;cat=Свет" title="Свет"> Свет </a></li>
-		<li class="menu"><a href="?page=post&amp;cat=Хроника" title="Хроника"> Хроника </a></li>
-		<li class="menu"><a href="?page=post&amp;cat=Спорт" title="Спорт"> Спорт </a></li>
-		<li class="menu"><a href="?page=post&amp;cat=Забава" title="Забава"> Забава </a></li>
-		<li class="menu"><a href="?page=post&amp;cat=Култура" title="Култура"> Култура </a></li>
+					<li class="menu"><a href="?page=category&amp;cat=Македонија" title="Македонија"> Македонија </a></li>
+		<li class="menu"><a href="?page=category&amp;cat=Економија" title="Економија"> Економија </a></li>
+		<li class="menu"><a href="?page=category&amp;cat=Свет" title="Свет"> Свет </a></li>
+		<li class="menu"><a href="?page=category&amp;cat=Хроника" title="Хроника"> Хроника </a></li>
+		<li class="menu"><a href="?page=category&amp;cat=Спорт" title="Спорт"> Спорт </a></li>
+		<li class="menu"><a href="?page=category&amp;cat=Забава" title="Забава"> Забава </a></li>
+		<li class="menu"><a href="?page=category&amp;cat=Култура" title="Култура"> Култура </a></li>
 		<li class="menu"><a href="/baram" title="Baram.be"> Барам бе </a></li>
 					<!--<li class="menu"><a href="?page=authors" title="Users"> Корисници </a>
 					</li>-->

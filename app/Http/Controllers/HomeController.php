@@ -22,17 +22,43 @@ class HomeController extends Controller {
 	 *
 	 * @return \Illuminate\Http\Response
 	 */
+
 	public function index() {
-		xdebug_break();
+		
 		$activePosts = $this->postService->getActivePosts ();
+
+		// usort($activePosts, function($a, $b)
+		// {
+		// 	return strcmp($b->created_at, $a->created_at);
+		// });
+
+		$post = $activePosts[0];	
+		if (isset($_GET['page'])){
+			if($_GET['page'] == 'post'){
+				$id = explode('-', substr($_GET['title'], 5))[0];
+				$post = $this->postService->getPostById($id);
+			}
+
+			$categoryPosts = null;
+			if($_GET['page'] == 'category'){
+				$categoryPosts = $this->postService->getBySection($_GET['cat']);
+			}
+		}
+		$mostViewed = $this->postService->getMostViewed(5);
+
 		if (isset ( $_GET ['page'] )) {
 			return view ( 'portal/index', [ 
 					'page' => $_GET ['page'],
-					'activePosts' => $activePosts 
+					'activePosts' => $activePosts,
+					'mostViewed' => $mostViewed,
+					'post' => $post,
+					'categoryPosts' => $categoryPosts
 			] );
 		} else {
 			return view ( 'portal/index', [ 
-					'activePosts' => $activePosts 
+					'activePosts' => $activePosts,
+					'mostViewed' => $mostViewed,
+					'post' => $post
 			] );
 		}
 	}

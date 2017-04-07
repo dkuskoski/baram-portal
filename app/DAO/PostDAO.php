@@ -4,17 +4,16 @@ namespace App\DAO;
 use App\Interfaces\PostInterface;
 use Illuminate\Support\Facades\DB;
 
-class PostDAO implements PostInterface{
-	
-	function getActivePosts(){
-		$items = DB::select("SELECT * FROM posts where status = 1 order by created_at");
-		return $items;
-	}
-	
-	function getAllPosts(){
-// 		$items = DB::select("SELECT posts.*, post_types.type FROM posts leftjoin type_post on posts.id = type_post.post_id leftjoin post_types on type_post.type_id = post_types.id order by created_at");
-		$items = DB::select("SELECT * FROM posts order by created_at");
-		return $items;
+class PostDAO implements PostInterface {
+
+    public function getActivePosts(){
+        $items = DB::select("SELECT * FROM posts where status = 1 order by created_at desc");
+        return $items;
+    }
+
+    public function getAllPosts(){
+        $items = DB::select("SELECT * FROM posts order by created_at desc");
+        return $items;
 	}
 	
 	function getPostById($id){
@@ -32,5 +31,15 @@ class PostDAO implements PostInterface{
 	
 	function enablePost($id){
 		$items = DB::table("posts")->where("id", $id)->update("status", 1);
+	}
+
+	function getMostViewed($count){
+		$items = DB::select("select * from posts where status = 1 order by views desc limit " . $count);
+		return $items;
+	}
+
+	function getBySection($section){
+		$items = DB::select("SELECT * FROM posts WHERE section = '" . $section . "' and status = 1 order by created_at desc");
+		return $items;
 	}
 }

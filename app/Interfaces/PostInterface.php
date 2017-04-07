@@ -14,4 +14,8 @@ interface PostInterface {
 	function enablePost($id);
 	
 	function getActivePosts();
+
+	function getMostViewed($count);
+
+	function getBySection($section);
 }

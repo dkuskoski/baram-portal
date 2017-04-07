@@ -97,14 +97,14 @@
 			<div class="column column_3_4">
 				<ul class="footer_menu">
 					<h4><li class="menu"><a href="?page=home" title="Дома"> Дома </a></li></h5>
-		<h5><li class="menu"><a href="?page=post&amp;cat=Македонија" title="Македонија"> Македонија </a></li></h5>
-		<h5><li class="menu"><a href="?page=post&amp;cat=Економија" title="Економија"> Економија </a></li></h5>
-		<h5><li class="menu"><a href="?page=post&amp;cat=Свет" title="Свет"> Свет </a></li></h5>
-		<h5><li class="menu"><a href="?page=post&amp;cat=Хроника" title="Хроника"> Хроника </a></li></h5>
-		<h5><li class="menu"><a href="?page=post&amp;cat=Спорт" title="Спорт"> Спорт </a></li></h5>
-		<h5><li class="menu"><a href="?page=post&amp;cat=Забава" title="Забава"> Забава </a></li></h5>
-		<h5><li class="menu"><a href="?page=post&amp;cat=Култура" title="Култура"> Култура </a></li></h5>
-		<h5><li class="menu"><a href="?page=post&amp;cat=18+" title="18+"> 18+ </a></li></h5>
+		<h5><li class="menu"><a href="?page=category&amp;cat=Македонија" title="Македонија"> Македонија </a></li></h5>
+		<h5><li class="menu"><a href="?page=category&amp;cat=Економија" title="Економија"> Економија </a></li></h5>
+		<h5><li class="menu"><a href="?page=category&amp;cat=Свет" title="Свет"> Свет </a></li></h5>
+		<h5><li class="menu"><a href="?page=category&amp;cat=Хроника" title="Хроника"> Хроника </a></li></h5>
+		<h5><li class="menu"><a href="?page=category&amp;cat=Спорт" title="Спорт"> Спорт </a></li></h5>
+		<h5><li class="menu"><a href="?page=category&amp;cat=Забава" title="Забава"> Забава </a></li></h5>
+		<h5><li class="menu"><a href="?page=category&amp;cat=Култура" title="Култура"> Култура </a></li></h5>
+		<h5><li class="menu"><a href="?page=category&amp;cat=18+" title="18+"> 18+ </a></li></h5>
 				</ul>
 			</div>
 			<div class="column column_1_4">

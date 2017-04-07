@@ -91,8 +91,8 @@
 				break;
 			}
 			if ($activePosts [$i]->section == $activePosts [1]->section) {
-				echo '<li class="bullet style_1"><a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [1]->id . '-' . str_replace ( ' ', '_', $activePosts [1]->title ) . '" ';
-				echo 'title="' . $activePosts [1]->title . '">' . $activePosts [1]->title . '</a></li> ';
+				echo '<li class="bullet style_1"><a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
+				echo 'title="' . $activePosts [$i]->title . '">' . $activePosts [$i]->title . '</a></li> ';
 				$counter ++;
 			}
 		}
@@ -134,8 +134,8 @@
 							break;
 						}
 						if ($activePosts [$i]->section == $activePosts [2]->section) {
-							echo '<li class="bullet style_1"><a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [1]->id . '-' . str_replace ( ' ', '_', $activePosts [1]->title ) . '" ';
-							echo 'title="' . $activePosts [1]->title . '">' . $activePosts [1]->title . '</a></li> ';
+							echo '<li class="bullet style_1"><a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
+							echo 'title="' . $activePosts [$i]->title . '">' . $activePosts [$i]->title . '</a></li> ';
 							$counter ++;
 						}
 					}
