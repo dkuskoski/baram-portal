@@ -3,6 +3,7 @@ namespace App\DAO;
 
 use App\Interfaces\PostInterface;
 use Illuminate\Support\Facades\DB;
+use App\Views;
 
 class PostDAO implements PostInterface {
 
@@ -47,5 +48,28 @@ class PostDAO implements PostInterface {
 	function getCountBySection($section){
 		$posts = DB::table('posts')->count();
 		return $posts;
+	}
+
+	function updateViews($id, $url, $session){
+		DB::table('views')->where('created_at', '<', new \DateTime('Yesterday'))->delete();
+
+		$posts = DB::select("select id from views where post_id = " . $id . " and session = '" . $session . "'");
+		if($posts != null && count($posts) > 0){
+			return false;
+		}
+
+		$view = new Views();
+		$view->post_id = $id;
+		$view->url = $url;
+		$view->session = $session;
+		$view->save();
+			
+		return true;
+	}
+
+	function updatePostViews($id, $views){
+		DB::table('posts')->where('id', '=', $id)->update([
+			'views' => $views + 1
+		]);
 	}
 }

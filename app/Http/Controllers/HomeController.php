@@ -36,7 +36,13 @@ class HomeController extends Controller {
 		if (isset($_GET['page'])){
 			if($_GET['page'] == 'post'){
 				$id = explode('-', substr($_GET['title'], 5))[0];
+				$update = $this->postService->updateViews($id, \Request::url(), \Request::ip());
 				$post = $this->postService->getPostById($id);
+				if($update){
+					$this->postService->updatePostViews($id, $post->views);
+					$post->views = $post->views + 1;
+				}
+				
 			}
 			$categoryPostsCount = 0;
 			$categoryPosts = null;

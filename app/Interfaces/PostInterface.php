@@ -20,4 +20,8 @@ interface PostInterface {
 	function getBySection($section, $end);
 
 	function getCountBySection($section);
+
+	function updateViews($id, $url, $session);
+
+	function updatePostViews($id, $views);
 }
