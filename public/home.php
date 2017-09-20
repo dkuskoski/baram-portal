@@ -189,7 +189,7 @@
 					src='<?php echo $activePosts[21]->path; ?>' alt='img'>
 			</a>
 				<h2 class="with_number" style="width: 100% !important;">
-					<a href="?page=post" style="width: 100% !important;"
+					<a href="<?php echo '?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [21]->id . '-' . str_replace ( ' ', '_', $activePosts [21]->title );?>" style="width: 100% !important;"
 						title="<?php echo $activePosts[21]->title; ?>">
 						<?php echo $activePosts[21]->title; ?></a>
 					<?php
@@ -264,7 +264,7 @@
 					src='<?php echo $activePosts[22]->path; ?>' alt='img'>
 			</a>
 				<h2 class="with_number" style="width: 100% !important;">
-					<a href="?page=post" style="width: 100% !important;"
+					<a href="<?php echo '?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [22]->id . '-' . str_replace ( ' ', '_', $activePosts [22]->title );?>" style="width: 100% !important;"
 						title="<?php echo $activePosts[22]->title; ?>">
 						<?php echo $activePosts[22]->title; ?></a>
 					<?php
@@ -274,7 +274,7 @@
 				</h2>
 				<ul class="post_details"
 					style="margin-bottom: 10px; width: 100% !important;">
-					<li class="category"><a href="?page=category&amp;cat=<?php echo $activePosts [6]->section; ?>"
+					<li class="category"><a href="?page=category&amp;cat=<?php echo $activePosts [22]->section; ?>"
 						title="<?php echo $activePosts[22]->section; ?>"
 						><?php echo $activePosts[22]->section; ?></a></li>
 					<li class="date"><?php echo date('Y-m-d', strtotime($activePosts[22]->created_at)); ?></li>
