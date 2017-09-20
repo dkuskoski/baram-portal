@@ -10,10 +10,10 @@
 				<p class="padding_top_bottom_25">Поинаков пристап на информации, медиумски портал со најнови вести од светот на технологијата, економијата, политиката и забавниот живот. Кога бараш нешто, барај на Барам.бе</p>
 				<div class="row">
 					<div class="column column_1_2">
-						<h5>MKadvertising</h5>
+						<!--<h5>MKadvertising</h5>
 						<p>
 							contact@baram.be
-						</p>
+						</p>-->
 					</div>
 					<div class="column column_1_2">
 						
@@ -22,7 +22,7 @@
 						</p>
 					</div>
 				</div>
-				<h4 class="box_header page_margin_top">Следетене на</h4>
+				<h4 class="box_header page_margin_top">Следете не на</h4>
 				<ul class="social_icons dark page_margin_top clearfix">
 					<li><a target="_blank" href="https://www.facebook.com/baram.be"
 						class="social_icon facebook" title="facebook"> &nbsp; </a></li>

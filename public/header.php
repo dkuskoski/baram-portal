@@ -102,10 +102,12 @@ document.getElementById('fb-root2').appendChild(e);
 	<div class="site_container boxed">
 		<div class="header_top_bar_container style_4 border clearfix">
 			<div class="header_top_bar">
-				<form class="search">
-					<input type="text" name="s" placeholder="Барам..." value="Барам..."
+				<form class="search" id="search" method="get" action="/index.php">
+					<input type="text" name="search" placeholder="Барам..." value=""
 						class="search_input hint"> <input type="submit"
-						class="search_submit" value=""> <input type="hidden" name="page"
+						class="search_submit" value="" onclick="javascript: document.getElementById('search').submit();"> <input type="hidden" name="page"
+						value="category">
+						<input type="hidden" name="cat"
 						value="search">
 				</form>
 				<!-- <ul class="social_icons dark clearfix"> -->

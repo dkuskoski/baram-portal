@@ -33,7 +33,7 @@ class HomeController extends Controller {
 		// });
 
 		$post = $activePosts[0];	
-		if (isset($_GET['page'])){
+		if (isset($_GET['page']) && count($_GET['page'] > 0)){
 			if($_GET['page'] == 'post'){
 				$id = explode('-', substr($_GET['title'], 5))[0];
 				$update = $this->postService->updateViews($id, \Request::url(), \Request::ip());
@@ -51,8 +51,12 @@ class HomeController extends Controller {
 				if($cat == 18){
 					$cat = "18+";
 				}
-				$categoryPosts = $this->postService->getBySection($cat, 6);
-				$categoryPostsCount = $this->postService->getCountBySection($cat);
+				$search = null;
+				if(isset($_GET['search']) && $_GET['cat'] == "search") {
+					$search = $_GET['search'];
+				}	
+				$categoryPostsCount = $this->postService->getCountBySection($cat, $search);
+				$categoryPosts = $this->postService->getBySection($cat, 6, $search);
 			}
 		}
 		$mostViewed = $this->postService->getMostViewed(5);
@@ -76,7 +80,11 @@ class HomeController extends Controller {
 	}
 
 	public function getPosts(){
-		$categoryPosts = $this->postService->getBySection($_GET['cat'], $_GET['count']);
+		$search = null;
+		if($_GET['cat'] == "search"){
+			$search = $_GET['search'];
+		}
+		$categoryPosts = $this->postService->getBySection($_GET['cat'], $_GET['count'], $search);
 		return $categoryPosts;
 	}
 }

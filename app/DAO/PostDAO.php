@@ -39,13 +39,19 @@ class PostDAO implements PostInterface {
 		return $items;
 	}
 
-	function getBySection($section, $end){
+	function getBySection($section, $end, $search){
 		$start = $end - 6;
-		$items = DB::select("SELECT * FROM posts WHERE section = '" . $section . "' and status = 1 order by created_at desc limit " . $end . ' offset ' . $start);
+		$items = null;
+
+		if($_GET['cat'] != "search"){
+			$items = DB::select("SELECT * FROM posts WHERE section = '" . $section . "' and status = 1 order by created_at desc limit " . $end . ' offset ' . $start);
+		} else {
+			$items = DB::select("SELECT * FROM posts WHERE status = 1 and section like '%" . $search . "%' or content like '%" . $search . "%' or title like '%" . $search . "%' order by created_at desc limit " . $end . ' offset ' . $start);
+		}
 		return $items;
 	}
 
-	function getCountBySection($section){
+	function getCountBySection($section, $search){
 		$posts = DB::table('posts')->count();
 		return $posts;
 	}

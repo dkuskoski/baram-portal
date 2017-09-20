@@ -62,7 +62,7 @@ function scrollHandler(e) {
 	   loading = true;
 	   var pos = $document.height() - $window.height() * 1.5
 	   $.ajax({
-				url: "getPosts?cat=<?php echo $_GET['cat']; ?>&count=" + parseInt(counter),
+				url: "getPosts?cat=<?php echo $_GET['cat']; ?>&count=" + parseInt(counter) + "&search=<?php echo $_GET['search']; ?>",
 				type: "get",
 				success: function (posts) {
 					var wrapper = $('#cat_wrapper');
@@ -84,6 +84,11 @@ function scrollHandler(e) {
 						} else {
 							day = (date.getDate() + 1);
 						} 
+						var desc = "";
+
+						if($post.content.substring(0, 4 ) != "<p><"){
+							desc = $post.content.substring(0, 150 );
+						}
 
 						wrapper.append('<li class="post">'
 						+ '<a href="?page=post&title=' + Math.floor((Math.random() * 90000) + 10000) + $post.id + '-' + $post.title.replace ( ' ', '_') + '" title="' + $post.title + '"> '
@@ -94,7 +99,7 @@ function scrollHandler(e) {
 						+ '</h2><ul class="post_details"> '
 						+ '<li class="category"><a href="?page=category&amp;cat=' + $post.section + '" title="' + $post.section + '">' + $post.section + '</a></li> '
 						+ '<li class="date">' + date.getFullYear() + '-' + month + '-' + day + '</li></ul><br> '
-						+ '<p>' + $post.content.substring(0, 150 ) + '...</p> '
+						+ '<p>' + desc + '...</p> '
 						+ '<a class="read_more" href="?page=post&title=' + Math.floor((Math.random() * 90000) + 10000) + $post.id + '-' + $post.title.replace ( ' ', '_') + '"><span class="arrow"></span><span>Повеке</span></a> '
 						+ '</div></li> ');
 						counter++;

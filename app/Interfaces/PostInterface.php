@@ -17,9 +17,9 @@ interface PostInterface {
 
 	function getMostViewed($count);
 
-	function getBySection($section, $end);
+	function getBySection($section, $end, $search);
 
-	function getCountBySection($section);
+	function getCountBySection($section, $search);
 
 	function updateViews($id, $url, $session);
 
