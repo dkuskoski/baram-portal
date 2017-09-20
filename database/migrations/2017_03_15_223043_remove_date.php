@@ -23,8 +23,8 @@ class RemoveDate extends Migration
      */
     public function down()
     {
-    	Schema::table ( 'posts', function (Blueprint $table) {
-    		$table->dropColumn ( 'date' );
-    	} );
+    	// Schema::table ( 'posts', function (Blueprint $table) {
+    	// 	$table->dropColumn ( 'date' );
+    	// } );
     }
 }

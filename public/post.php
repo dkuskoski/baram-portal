@@ -53,25 +53,21 @@
 						<div class="post_content page_margin_top_section clearfix">
 							<div class="content_box">
 								<?php echo $post->content;?>
-							</div>
-							<div class="author_box animated_element">
-								<div class="author">
-									<a title="Anna Shubina" href="?page=author" class="thumb"> <img
-										alt="img" src="images/samples/Team_100x100/image_02.jpg">
-									</a>
-									<div class="details">
-										<h5>
-											<a title="Anna Shubina" href="?page=author">Anna Shubina</a>
-										</h5>
-										<h6>EDITOR</h6>
-										<a href="?page=author" class="more highlight margin_top_15">PROFILE</a>
-									</div>
-								</div>
-							</div>
+					<a href="javascript:shareFB();"><img style="width: 150px; margin-top: 20px;" class="social_icon" src="/img/share-on-facebook.png"/></a>
+					</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			
+			<script>
+				function shareFB(){
+FB.ui({
+  method: 'share',
+  href: window.location.href
+}, function(response){});
+				}
+				</script>
 			<?php
 			// 	<div class="row page_margin_top">
 			// 		<div class="share_box clearfix">

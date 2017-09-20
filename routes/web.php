@@ -6,7 +6,7 @@ Route::get ( '/home', 'HomeController@index' );
 
 Route::get ( '/getPosts', 'HomeController@getPosts' );
 
-Route::post ( '/create_user', 'Auth\RegisterController@create_user' );
+// Route::post ( '/create_user', 'Auth\RegisterController@create_user' );
 
 Auth::routes ();
 

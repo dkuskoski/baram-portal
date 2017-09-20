@@ -13,15 +13,15 @@ class PostTypeRelation extends Migration
      */
 	public function up()
 	{
-		Schema::create('type_post', function (Blueprint $table) {
-			$table->increments('id');
-			$table->integer('post_id');
-			$table->string('type_id');
-		});
+		// Schema::create('type_post', function (Blueprint $table) {
+		// 	$table->increments('id');
+		// 	$table->integer('post_id');
+		// 	$table->string('type_id');
+		// });
 	
-			Schema::table ( 'posts', function (Blueprint $table) {
-				$table->timestamps();
-			} );
+		// 	Schema::table ( 'posts', function (Blueprint $table) {
+		// 		$table->timestamps();
+		// 	} );
 	}
 	
 	/**
@@ -31,8 +31,8 @@ class PostTypeRelation extends Migration
 	 */
 	public function down()
 	{
-		Schema::table ( 'posts', function (Blueprint $table) {
-			$table->dropColumn ( 'date' );
-		} );
+		// Schema::table ( 'posts', function (Blueprint $table) {
+		// 	$table->dropColumn ( 'date' );
+		// } );
 	}
 	}

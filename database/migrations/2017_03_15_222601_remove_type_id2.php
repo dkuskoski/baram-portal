@@ -23,8 +23,8 @@ class RemoveTypeId2 extends Migration
      */
     public function down()
     {
-    	Schema::table ( 'posts', function (Blueprint $table) {
-    		$table->dropColumn ( 'type_id' );
-    	} );
+    	// Schema::table ( 'posts', function (Blueprint $table) {
+    	// 	$table->dropColumn ( 'type_id' );
+    	// } );
     }
 }

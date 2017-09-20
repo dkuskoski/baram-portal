@@ -1,8 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:og="http://ogp.me/ns#">
 <head>
 <title>Baram.be</title>
 <!--meta-->
+<?php 
+if(isset($post)){
+echo '<meta property="og:image" content="' . $post->path . '" />';
+echo '<meta property="og:type" content="article" />';
+echo '<meta property="og:description" content="' . $post->title . '" />';
+echo '<meta property="og:locale" content="en_US" />';
+echo '<meta property="og:title" content="Baram.be" />';
+echo '<meta property="og:url" content="http://' . $_SERVER["HTTP_HOST"]. '?' .$_SERVER['QUERY_STRING'] . '" />';
+}
+?>
 <meta charset="UTF-8" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1.2" />
@@ -64,9 +74,18 @@ FB.init({
 appId : '683421731799698',
 status : true, // check login status
 cookie : true, // enable cookies to allow the server to access the session
-xfbml : true // parse XFBML
+xfbml : true, // parse XFBML
+version : 'v2.10'
 });
 };
+
+(function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
  
 (function() {
 var e = document.createElement('script');
@@ -274,12 +293,13 @@ document.getElementById('fb-root2').appendChild(e);
 							?>
 							</ul>
 						</li>
-						<li class="date"><?php
-						for($i = 0; $i < 10; $i ++) {
-							echo '<abbr title="' . date ( 'Y M d', strtotime ( $activePosts [$i]->created_at ) ) . '" class="timeago current">' . date ( 'Y m d', strtotime ( $activePosts [$i]->created_at ) ) . '</abbr> ';
-						}
-						?>
-							</li>
+						<?php
+						// <li class="date">
+						// for($i = 0; $i < 10; $i ++) {
+						//     echo '<abbr title="' . date ( 'Y M d', strtotime ( $activePosts [$i]->created_at ) ) . '" class="timeago current">' . date ( 'Y m d', strtotime ( $activePosts [$i]->created_at ) ) . '</abbr> ';
+						// }
+						// </li>
+							?>
 					</ul>
 				</div>
 			</div>
@@ -292,13 +312,13 @@ document.getElementById('fb-root2').appendChild(e);
 			<div class="header clearfix">
 				<div class="logo">
 					<h1>
-						<a href="?page=home" title="Pressroom">Baram.be</a>
+						<a href="?page=home" title="Baram.be">Baram.be</a>
 					</h1>
 					<h4>Ако бараш нешто</h4>
 				</div>
 				<div class="placeholder">
-					<img width="100%" height="100%" src="/img/728x90.gif"
-						alt="728 x 90" />
+					<a href="http://www.lycamobile.mk"><img width="100%" height="100%" src="/img/728x90.gif"
+						alt="728 x 90" /></a>
 				</div>
 			</div>
 		</div>

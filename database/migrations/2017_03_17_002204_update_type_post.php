@@ -13,11 +13,11 @@ class UpdateTypePost extends Migration
      */
     public function up()
     {
-    	Schema::create('type_post', function (Blueprint $table) {
-    		$table->increments('id');
-    		$table->bigInteger('post_id');
-    		$table->bigInteger('type_id');
-    	});
+    	// Schema::create('type_post', function (Blueprint $table) {
+    	// 	$table->increments('id');
+    	// 	$table->bigInteger('post_id');
+    	// 	$table->bigInteger('type_id');
+    	// });
     }
 
     /**
@@ -27,9 +27,8 @@ class UpdateTypePost extends Migration
      */
     public function down()
     {
-    	
-    	Schema::table('type_post', function (Blueprint $table) {
-    		$table->drop('type_id');
-    	});
+    	// Schema::table('type_post', function (Blueprint $table) {
+    	// 	$table->drop('type_id');
+    	// });
     }
 }

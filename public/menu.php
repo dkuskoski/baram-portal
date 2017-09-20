@@ -4,8 +4,8 @@
 		// <li class="menu" style="float: right;"><a href="#" role="button" data-toggle="modal" data-target="#login-modal">Логирај се</a>
 		// 		</li>
 				?>
-						<li class="menu" style="float: right;"><a href="/baram" title="Baram.be"> Барам бе </a>
-				</li>
+						<!--<li class="menu" style="float: right;"><a href="/baram" title="Baram.be"> Барам бе </a>
+				</li>-->
 		<li class="menu"><a href="?page=home" title="Дома"> Дома </a></li>
 		<li class="menu"><a href="?page=category&amp;cat=Македонија" title="Македонија"> Македонија </a></li>
 		<li class="menu"><a href="?page=category&amp;cat=Економија" title="Економија"> Економија </a></li>

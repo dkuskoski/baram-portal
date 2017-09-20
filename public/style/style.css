@@ -152,7 +152,7 @@ body.image_1 {
 }
 
 body.image_2 {
-    background: url("../images/backgrounds/images/image_2.jpg") fixed no-repeat;
+    background: url("../images/backgrounds/images/image_2.jpg") fixed no-repeat center;
 }
 
 body.image_3 {
@@ -1395,6 +1395,10 @@ a.slider_control:hover {
     width: 100%;
 }
 
+.caroufredsel_wrapper_small_slider {
+    right: 0px!important;
+}
+
 .column_1_2 {
     width: 510px;
 }
@@ -1888,7 +1892,7 @@ blockquote .author {
 
 .post.single .author_box,
 .post.single .content_box {
-    float: right;
+    float: left;
 }
 
 .post.single .author_box {
@@ -1900,8 +1904,8 @@ blockquote .author {
 }
 
 .post.single .content_box {
-    width: 560px;
-    margin-left: 120px;
+    width: 100%;
+    margin-left: 0px;
 }
 
 .post.single .text {
@@ -4328,4 +4332,8 @@ body.lock-position {
     overflow: hidden;
     width: 100%;
     height: 100%;
+}
+
+.caroufredsel_wrapper_small_slider {
+    right: 0px!important;
 }

@@ -76,8 +76,8 @@
 							<option value="Економија">Економија</option>
 							<option value="Свет">Свет</option>
 							<option value="Хроника">Хроника</option>
+							<option value="Забава">Забава</option>
 							<option value="Спорт">Спорт</option>
-							<option selected value="Забава">Забава</option>
 							<option value="Култура">Култура</option>
 							<option value="18+">18+</option>
 						</select>

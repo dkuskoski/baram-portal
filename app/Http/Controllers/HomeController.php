@@ -47,8 +47,12 @@ class HomeController extends Controller {
 			$categoryPostsCount = 0;
 			$categoryPosts = null;
 			if($_GET['page'] == 'category'){
-				$categoryPosts = $this->postService->getBySection($_GET['cat'], 6);
-				$categoryPostsCount = $this->postService->getCountBySection($_GET['cat']);
+				$cat = $_GET['cat'];
+				if($cat == 18){
+					$cat = "18+";
+				}
+				$categoryPosts = $this->postService->getBySection($cat, 6);
+				$categoryPostsCount = $this->postService->getCountBySection($cat);
 			}
 		}
 		$mostViewed = $this->postService->getMostViewed(5);

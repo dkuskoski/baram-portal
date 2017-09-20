@@ -3,7 +3,7 @@
 	<ul class="blog small_margin clearfix">
 
 	<?php 
-	for($i = 0; $i < 3; $i ++) { //TODO $i = 25
+	for($i = 25; $i < 28; $i ++) {
 		echo '<li class="post"><a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
 		echo 'title="' . $activePosts [$i]->title . '"> <span class="icon gallery"></span> <img style="height: 142px; width: 100%; object-fit: cover;"';
 		echo 'src="' . $activePosts [$i]->path . '" alt="img"> </a> <div class="post_content"><h5> ';
@@ -115,10 +115,10 @@
 					</div></li>
 
 					<?php
-					for ($i = 0; $i < 4; $i++){
+					for ($i = 1; $i < 5; $i++){
 				echo '<li class="post">	<div class="post_content">';
 				echo '<span class="number animated_element" data-value="' . $mostViewed[$i]->views . '"></span><h5>';
-				echo '<a href="?page=post&title=' . rand ( 10000, 99999 ) . $mostViewed [0]->id . '-' . str_replace ( ' ', '_', $mostViewed [0]->title) . '" ';
+				echo '<a href="?page=post&title=' . rand ( 10000, 99999 ) . $mostViewed [$i]->id . '-' . str_replace ( ' ', '_', $mostViewed [$i]->title) . '" ';
 				echo 'title="' . $mostViewed[$i]->title . '">' . $mostViewed[$i]->title . '</a></h5>';
 			    echo '<ul class="post_details simple">';
 				echo '<li class="category"><a href="?page=category&amp;cat=' . $mostViewed[$i]->section . '" ';
