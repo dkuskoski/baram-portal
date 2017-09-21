@@ -7,6 +7,10 @@
 				
 				echo '<li style="height: 470px; background: #000;" class="slide"><a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
 				echo 'title="' . $activePosts [$i]->title . '"> <img ';
+				if($activePosts[$i]->section == "18+")
+				{
+					echo ' class="erotic-foggy" onmouseover="disableFoggy(this);" onmouseout="enableFoggy(this);" ';
+				}
 				echo 'src="' . $activePosts [$i]->path . '" alt="img" style="height: 500px; width: 100%; object-fit: cover;"> ';
 				echo '</a> ';
 				echo '<div class="slider_content_box"> ';
@@ -33,6 +37,10 @@
 			echo '<ul class="blog column column_1_2"> ';
 			echo '<li class="post"><a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
 			echo 'title="' . $activePosts [$i]->title . '"> <img style="height: 220px; width: 100%; object-fit: cover;" ';
+			if($activePosts[$i]->section == "18+")
+			{
+				echo ' class="erotic-foggy" onmouseover="disableFoggy(this);" onmouseout="enableFoggy(this);" ';
+			}
 			echo 'src="' . $activePosts [$i]->path . '" alt="img"> ';
 			echo '</a> ';
 			echo '<h2 class="with_number"> ';
@@ -49,7 +57,12 @@
 			for($i = 5; $i < 8; $i ++) {
 				echo '<li class="post"><a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
 				echo 'title="' . $activePosts [$i]->title . '"> <img ';
-				echo 'src="' . $activePosts [$i]->path . '" alt="img" style="height: 120px; width: 100%; object-fit: cover;"> ';
+				echo 'src="' . $activePosts [$i]->path . '"';
+				if($activePosts[$i]->section == "18+")
+				{
+					echo ' class="erotic-foggy" onmouseover="disableFoggy(this);" onmouseout="enableFoggy(this);" ';
+				}
+				echo 'alt="img" style="height: 120px; width: 100%; object-fit: cover;"> ';
 				echo '</a> ';
 				echo '<h5> ';
 				echo '<a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" title="' . $activePosts [$i]->title . '">' . $activePosts [$i]->title . '</a> ';
@@ -71,6 +84,12 @@
 						href="<?php echo '?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [1]->id . '-' . str_replace ( ' ', '_', $activePosts [1]->title );?>"
 						title="<?php echo $activePosts [1]->title;?>"> <img
 							src="<?php echo $activePosts [1]->path;?>"
+							<?php
+								if($activePosts[1]->section == "18+")
+								{
+									echo ' class="erotic-foggy" onmouseover="disableFoggy(this);" onmouseout="enableFoggy(this);" ';
+								}
+							?>
 							style="height: 150px; width: 100%; object-fit: cover;" alt='img'>
 					</a>
 						<div class="post_content">
@@ -113,6 +132,12 @@
 					<li class="post"><a
 						href="<?php echo '?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$no]->id . '-' . str_replace ( ' ', '_', $activePosts [$no]->title );?>"
 						title="<?php echo $activePosts [$no]->title;?>"> <img
+						<?php 
+							if($activePosts[$no]->section == "18+")
+							{
+								echo ' class="erotic-foggy" onmouseover="disableFoggy(this);" onmouseout="enableFoggy(this);" ';
+							}
+						?>
 							style="height: 150px; width: 100%; object-fit: cover;"
 							src="<?php echo $activePosts [$no]->path;?>" alt='img'>
 					</a>
@@ -135,7 +160,7 @@
 						if ($counter == 8) {
 							break;
 						}
-						if ($activePosts [$i]->section == $activePosts [2]->section) {
+						if ($activePosts [$i]->section == $activePosts [$no]->section) {
 							echo '<li class="bullet style_1"><a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
 							echo 'title="' . $activePosts [$i]->title . '">' . $activePosts [$i]->title . '</a></li> ';
 							$counter ++;
@@ -160,8 +185,12 @@
 				<?php
 				for($i = 10; $i < 20; $i ++) {
 					echo '<li class="post"><a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '"
-					title="' . $activePosts [$i]->title . '"> <img
-						src="' . $activePosts [$i]->path . '" alt="img" style="height: 176px; width: 100%; object-fit: cover;">
+					title="' . $activePosts [$i]->title . '"> <img';
+					if($activePosts[$i]->section == "18+")
+					{
+						echo ' class="erotic-foggy" onmouseover="disableFoggy(this);" onmouseout="enableFoggy(this);" ';
+					}
+						echo 'src="' . $activePosts [$i]->path . '" alt="img" style="height: 176px; width: 100%; object-fit: cover;">
 				</a>
 					<h5>
 						<a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '"
@@ -186,6 +215,12 @@
 				href="<?php echo '?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [21]->id . '-' . str_replace ( ' ', '_', $activePosts [21]->title );?>"
 				title="<?php echo $activePosts[21]->title; ?>"> <img
 					style="height: 250px; width: 100%; object-fit: cover;"
+					<?php 
+						if($activePosts[21]->section == "18+")
+						{
+							echo ' class="erotic-foggy" onmouseover="disableFoggy(this);" onmouseout="enableFoggy(this);" ';
+						}
+					?>
 					src='<?php echo $activePosts[21]->path; ?>' alt='img'>
 			</a>
 				<h2 class="with_number" style="width: 100% !important;">
@@ -261,6 +296,12 @@
 				href="<?php echo '?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [22]->id . '-' . str_replace ( ' ', '_', $activePosts [22]->title ); ?>"
 				title="<?php echo $activePosts[22]->title;?>"> <img
 					style="height: 250px; width: 100%; object-fit: cover;"
+					<?php 
+						if($activePosts[22]->section == "18+")
+						{
+							echo ' class="erotic-foggy" onmouseover="disableFoggy(this);" onmouseout="enableFoggy(this);" ';
+						}
+					?>
 					src='<?php echo $activePosts[22]->path; ?>' alt='img'>
 			</a>
 				<h2 class="with_number" style="width: 100% !important;">
@@ -340,7 +381,12 @@
 							if( mb_strtolower($activePosts [$i]->section) == mb_strtolower($activePosts [0]->section)){
 			echo '<li class="post"><a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
 			echo 'title="' . $activePosts [$i]->title . '"> <img ';
-			echo 'src="' . $activePosts [$i]->path . '" style="height: 100px; width: 100px; object-fit: cover;" alt="img"></a> ';
+			echo 'src="' . $activePosts [$i]->path . '" style="height: 100px; width: 100px; object-fit: cover;" alt="img"';
+			if($activePosts[$i]->section == "18+")
+			{
+				echo ' class="erotic-foggy" onmouseover="disableFoggy(this);" onmouseout="enableFoggy(this);" ';
+			}
+			echo '></a> ';
 			echo '<div class="post_content"><h5> ';
 			echo '<a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
 			echo 'title="' . $activePosts [$i]->title . '">' . $activePosts [$i]->title . '</a></h5><ul class="post_details simple"> ';

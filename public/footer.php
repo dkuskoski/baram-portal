@@ -49,7 +49,11 @@
 			for($i = 0; $i < 10; $i ++) {
 				echo '<li class="post"><a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
 				echo 'title="' . $activePosts [$i]->title . '"> ';
-				echo '<img ';
+				echo '<img '; 
+				if($activePosts[$i]->section == "18+")
+				{
+					echo 'class="erotic-foggy" onmouseover="disableFoggy(this);" onmouseout="enableFoggy(this);" ';
+				}
 				echo 'src="' . $activePosts [$i]->path . '"  style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height: 100px; width: 100px; object-fit: cover;" alt="img"></a>' ;
 				echo '<div class="post_content"><h5> ';
 				echo '<a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '"  ';
@@ -76,8 +80,8 @@
 							}
 							if( mb_strtolower($activePosts [$i]->section) == mb_strtolower('18+')){
 						echo '<li class="post"><a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
-						echo 'title="' . $activePosts [$i]->title . '"><img class="erotic-foggy" ';
-						echo 'src="' . $activePosts [$i]->path . '" onmouseover="disableFoggy(this);" onmouseout="enableFoggy(this);" style="height: 242px; width: 330px; object-fit: cover;" alt="img"> </a> '; //330 x 242
+						echo 'title="' . $activePosts [$i]->title . '"><img class="erotic-foggy" onmouseover="disableFoggy(this);" onmouseout="enableFoggy(this);"';
+						echo 'src="' . $activePosts [$i]->path . '" style="height: 242px; width: 330px; object-fit: cover;" alt="img"> </a> '; //330 x 242
 						echo '<h5 class="with_number"><a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
 						echo 'title="' . $activePosts [$i]->title . '">' . $activePosts [$i]->title . '</a> ';
 						//echo '<a class="comments_number" href="?page=post_gallery#comments_list" title="2 comments">2<span	class="arrow_comments"></span></a> ';
@@ -166,23 +170,61 @@
 <script type="text/javascript" src="js/jquery.twbsPagination.min.js"></script>
 
 <script>
+var over = false;
+var blurDensity = 7;
 $('.erotic-foggy').foggy({
-   blurRadius: 5,          // In pixels.
-   opacity: 2,           // Falls back to a filter for IE.
+   blurRadius: blurDensity,          // In pixels.
+   opacity: 1,           // Falls back to a filter for IE.
    cssFilterSupport: true  // Use "-webkit-filter" where available.
  }); 
-
- function disableFoggy(elem){
-	 $(elem).foggy(false);
+function disableFoggy(elem){
+	over = true;
+	var counter = 0;
+	 for (var i = 0; i < blurDensity; i++){
+		 var milliseconds = i * 100;
+		setTimeout(function(){
+			if(!over){
+				return;
+			}
+			$(elem).foggy({
+				blurRadius: (blurDensity - counter),          // In pixels.
+				opacity: 1,           // Falls back to a filter for IE.
+				cssFilterSupport: true  // Use "-webkit-filter" where available.
+ 			});
+			counter++;
+			if(counter == blurDensity){
+				$(elem).foggy(false);
+			}
+		}, milliseconds);
+	 }
  }
+ 
  function enableFoggy(elem){
-	 $(elem).foggy({
-   blurRadius: 5,          // In pixels.
-   opacity: 2,           // Falls back to a filter for IE.
-   cssFilterSupport: true  // Use "-webkit-filter" where available.
- }); 
+	over = false;
+	var counter = 1;
+	for (var i = 0; i < blurDensity; i++){
+		var milliseconds = i * 100;
+	   setTimeout(function(){
+		if(over){
+			return;
+		}
+		   $(elem).foggy({
+			   blurRadius: counter,          // In pixels.
+			   opacity: 1,           // Falls back to a filter for IE.
+			   cssFilterSupport: true  // Use "-webkit-filter" where available.
+			});
+		   counter++;
+	   }, milliseconds);
+	}
  }
-</script>
+
+function shareFB(){
+	FB.ui({
+  		method: 'share',
+  		href: window.location.href
+	}, function(response){});
+}
+				</script>
 <br>
 <br>
 <br>
