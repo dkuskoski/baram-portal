@@ -13,7 +13,7 @@ class HomeController extends Controller {
 	 */
 	protected $postService;
 	public function __construct(PostInterface $postInterface) {
-		$this->middleware ( 'guest' );
+		// $this->middleware ( 'guest' );
 		$this->postService = $postInterface;
 	}
 	
