@@ -3,13 +3,14 @@
 <head>
 <title>Baram.be</title>
 <!--meta-->
+<meta property="fb:app_id" content="683421731799698" />
 <?php 
 if(isset($post)){
 echo '<meta property="og:image" content="' . $post->path . '" />';
 echo '<meta property="og:type" content="article" />';
-echo '<meta property="og:description" content="' . $post->title . '" />';
-echo '<meta property="og:locale" content="en_US" />';
-echo '<meta property="og:title" content="Baram.be" />';
+echo '<meta property="og:description" content="&nbsp;" />';
+echo '<meta property="og:locale" content="mk_MK" />';
+echo '<meta property="og:title" content="' . $post->title . '" />';
 echo '<meta property="og:url" content="http://' . $_SERVER["HTTP_HOST"]. '?' .$_SERVER['QUERY_STRING'] . '" />';
 }
 ?>
@@ -51,12 +52,19 @@ echo '<meta property="og:url" content="http://' . $_SERVER["HTTP_HOST"]. '?' .$_
 
   ga('create', 'UA-89081951-1', 'auto');
   ga('send', 'pageview');
-
 </script>
 
 
 </head>
 <body class="image_2">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/mk_MK/sdk.js#xfbml=1&version=v2.10&appId=683421731799698";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <div id="fb-root2"></div>
 	<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

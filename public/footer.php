@@ -224,6 +224,11 @@ function shareFB(){
   		href: window.location.href
 	}, function(response){});
 }
+
+FB.Event.subscribe('xfbml.render', function(){
+	$(".fb-comments").children().css('width', $('#post_img').width());
+	$(".fb-comments").children().children().css('width', $('#post_img').width());
+});
 				</script>
 <br>
 <br>

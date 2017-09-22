@@ -19,7 +19,7 @@
 						<a href="javascript:void(0);"
 							class="post_image page_margin_top prettyPhoto"
 							title="<?php echo $post->title;?>">
-							<img src='<?php echo $post->path;?>' alt='img'>
+							<img id="post_img" src='<?php echo $post->path;?>' alt='img'>
 						</a>
 						<div class="sentence">
 							<span class="text"><?php echo $post->title?></span>
@@ -27,7 +27,8 @@
 						<div class="post_content page_margin_top_section clearfix">
 							<div class="content_box">
 								<?php echo $post->content;?>
-					<a href="javascript:shareFB();"><img style="width: 150px; margin-top: 20px;" class="social_icon" src="/img/share-on-facebook.png"/></a>
+					<a href="javascript:shareFB();"><img style="width: 150px; margin-top: 10px;" class="social_icon" src="/img/share-on-facebook.png"/></a>
+					<div class="fb-comments" data-href="<?php echo 'http://' . $_SERVER["HTTP_HOST"]. '?id=' . $post->id . '" data-numposts="5"></div>';?>
 					</div>
 						</div>
 					</div>
@@ -37,6 +38,7 @@
 				include_once('nav.php');
 				?>
 		</div>
+
 		<div class="row page_margin_top">
 			<div class="column column_1_1">
 				<div class="horizontal_carousel_container small">
