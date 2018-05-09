@@ -24,8 +24,13 @@ class HomeController extends Controller {
 	 */
 
 	public function index() {
-		
-		$activePosts = $this->postService->getActivePosts ();
+
+		try{
+		$activePosts = $this->postService->getAllPosts ();
+		} catch (\Exception $e){
+			echo $e;
+			return view ("test");
+		}
 
 		// usort($activePosts, function($a, $b)
 		// {
