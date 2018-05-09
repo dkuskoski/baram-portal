@@ -26,11 +26,11 @@ class HomeController extends Controller {
 	public function index() {
 
 		$activePosts = $this->postService->getActivePosts();
-		$post = $activePosts[0];	
 		$categoryPostsCount = 0;
 		$categoryPosts = null;
 		$mostViewed = $this->postService->getMostViewed(5);
-
+		$post = "";
+		
 		if (isset($_GET['page']) ){
 			if($_GET['page'] == 'post'){
 				$id = explode('-', $_GET['title'])[0];
@@ -65,8 +65,7 @@ class HomeController extends Controller {
 		} else {
 			return view ( 'portal/index', [ 
 					'activePosts' => $activePosts,
-					'mostViewed' => $mostViewed,
-					'post' => $post
+					'mostViewed' => $mostViewed
 			] );
 		}
 	}

@@ -1,7 +1,32 @@
 <!DOCTYPE html>
 <html xmlns:og="http://ogp.me/ns#">
 <head>
-<title>Baram.be</title>
+<?php 
+$cyr = [
+	'а','б','в','г','д','ѓ','е','ж','з','ѕ','и','j','к','л','љ','м','н','њ','о','п',
+	'р','с','т','ќ','у','ф','х','ц','ч','ш','џ',
+	'А','Б','В','Г','Д','Ѓ','Е','Ж','З','Ѕ','И','Ј','К','Л','Љ','М','Н','Њ','О','П',
+	'Р','С','Т','Ќ','У','Ф','Х','Ц','Ч','Ш','Џ'
+];
+$lat = [
+	'a','b','v','g','d','g','e','z','z','z','i','j','k','l','lj', 'm','n','nj','o','p',
+	'r','s','t','k','u','f','h','c','c','sh','dz',
+	'A','B','B','G','D','G','E','Z','Z','Z','I','J','K','L','LJ','M','N','NJ','O','P',
+	'R','S','T','K','U','F','H','C','C','SH','DZ'
+];
+
+if(isset($post) && $post != null){
+	echo '<title>' . str_replace($cyr, $lat, $post->title) . '</title>';
+	echo '<meta name="description=" content="' . str_replace($cyr, $lat, $post->section) . ' ' . str_replace($cyr, $lat, $post->title) . ' baram be barambe baram.be baram mk baram com mk baram.com.mk">';
+} else if (isset($_GET['cat']) && $_GET['cat'] != null) {
+	echo '<title>' . str_replace($cyr, $lat, $_GET['cat']) . '</title>';
+	echo '<meta name="description=" content="' . str_replace($cyr, $lat, $_GET['cat']) . ' baram be barambe baram.be baram mk baram com mk baram.com.mk">';
+} else {
+	echo '<title>baram</title>';
+	echo '<meta name="description=" content="baram be barambe baram.be baram mk baram com mk baram.com.mk">';
+}
+?>
+
 <!--meta-->
 <meta property="fb:app_id" content="683421731799698" />
 <?php 
@@ -327,8 +352,8 @@ document.getElementById('fb-root2').appendChild(e);
 					<h4>Ако бараш нешто</h4>
 				</div>
 				<div class="placeholder">
-					<a href="http://www.lycamobile.mk"><img width="100%" height="100%" src="/img/728x90.gif"
-						alt="728 x 90" /></a>
+					<a href="https://www.facebook.com/centerloungeandfreshbar/"><img width="100%" height="100%" src="/img/728x90.gif"
+						alt="baram be" /></a>
 				</div>
 			</div>
 		</div>
