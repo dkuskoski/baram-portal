@@ -13,7 +13,7 @@ class HomeController extends Controller {
 	 */
 	protected $postService;
 	public function __construct(PostInterface $postInterface) {
-		// $this->middleware ( 'guest' );
+		$this->middleware ( 'guest' );
 		$this->postService = $postInterface;
 	}
 	
@@ -25,22 +25,15 @@ class HomeController extends Controller {
 
 	public function index() {
 
-		try{
-		$activePosts = $this->postService->getAllPosts ();
-		} catch (\Exception $e){
-			echo $e;
-			return view ("test");
-		}
-
-		// usort($activePosts, function($a, $b)
-		// {
-		// 	return strcmp($b->created_at, $a->created_at);
-		// });
-
+		$activePosts = $this->postService->getActivePosts();
 		$post = $activePosts[0];	
-		if (isset($_GET['page']) && count($_GET['page'] > 0)){
+		$categoryPostsCount = 0;
+		$categoryPosts = null;
+		$mostViewed = $this->postService->getMostViewed(5);
+
+		if (isset($_GET['page']) ){
 			if($_GET['page'] == 'post'){
-				$id = explode('-', substr($_GET['title'], 5))[0];
+				$id = explode('-', $_GET['title'])[0];
 				$update = $this->postService->updateViews($id, \Request::url(), \Request::ip());
 				$post = $this->postService->getPostById($id);
 				if($update){
@@ -49,8 +42,6 @@ class HomeController extends Controller {
 				}
 				
 			}
-			$categoryPostsCount = 0;
-			$categoryPosts = null;
 			if($_GET['page'] == 'category'){
 				$cat = $_GET['cat'];
 				if($cat == 18){
@@ -63,10 +54,6 @@ class HomeController extends Controller {
 				$categoryPostsCount = $this->postService->getCountBySection($cat, $search);
 				$categoryPosts = $this->postService->getBySection($cat, 6, $search);
 			}
-		}
-		$mostViewed = $this->postService->getMostViewed(5);
-
-		if (isset ( $_GET ['page'] )) {
 			return view ( 'portal/index', [ 
 					'page' => $_GET ['page'],
 					'activePosts' => $activePosts,

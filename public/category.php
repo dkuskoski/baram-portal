@@ -17,10 +17,10 @@
 										<?php
 					foreach ($categoryPosts as $post){
 						echo '<li class="post">';
-						echo '<a href="?page=post&title=' . rand ( 10000, 99999 ) . $post->id . '-' . str_replace ( ' ', '_', $post->title ) . '" title="' . $post->title . '"> ';
+						echo '<a href="?page=post&title=' . $post->id . '-' . str_replace ( ' ', '_', $post->title ) . '" title="' . $post->title . '"> ';
 						echo '<img src="' . $post->path . '" style="height: 242px; width: 330px; object-fit: cover;" alt="img"> ';
 						echo '</a><div class="post_content"><h2 class="with_number"> ';
-						echo '<a style="width: 100%;" href="?page=post&title=' . rand ( 10000, 99999 ) . $post->id . '-' . str_replace ( ' ', '_', $post->title ) . '" title="' . $post->title . '">' . $post->title . '</a> ';
+						echo '<a style="width: 100%;" href="?page=post&title=' . $post->id . '-' . str_replace ( ' ', '_', $post->title ) . '" title="' . $post->title . '">' . $post->title . '</a> ';
 						// echo '<a class="comments_number" href="?page=post#comments_list" title="2 comments">2<span class="arrow_comments"></span></a> ';
 						echo '</h2><ul class="post_details"> ';
 						echo '<li class="category"><a href="?page=category&amp;cat=' . $post->section . '" title="' . $post->section . '">' . $post->section . '</a></li> ';
@@ -28,7 +28,7 @@
 						if(mb_substr ( $post->content, 0, 4 ) != "<p><") {
 							echo '<p>' . mb_substr ( $post->content, 0, 150 ) . '...</p> ';
 						}
-						echo '<a class="read_more" href="?page=post&title=' . rand ( 10000, 99999 ) . $post->id . '-' . str_replace ( ' ', '_', $post->title ) . '"><span class="arrow"></span><span>Повеке</span></a> ';
+						echo '<a class="read_more" href="?page=post&title=' . $post->id . '-' . str_replace ( ' ', '_', $post->title ) . '"><span class="arrow"></span><span>Повеке</span></a> ';
 						echo '</div></li> ';
 					}
 					?>

@@ -5,7 +5,7 @@
 			<?php
 			for($i = 0; $i < 3; $i ++) {
 				
-				echo '<li style="height: 470px; background: #000;" class="slide"><a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
+				echo '<li style="height: 470px; background: #000;" class="slide"><a href="?page=post&title=' . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
 				echo 'title="' . $activePosts [$i]->title . '"> <img ';
 				if($activePosts[$i]->section == "18+")
 				{
@@ -20,7 +20,7 @@
 				echo '<li class="date">' . date ( 'Y-m-d', strtotime ( $activePosts [$i]->created_at ) ) . '</li> ';
 				echo '</ul> ';
 				echo '<h2> ';
-				echo '<a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '"';
+				echo '<a href="?page=post&title=' . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '"';
 				echo 'title="' . $activePosts [$i]->title . '">' . $activePosts [$i]->title . '</a> ';
 				echo '</h2> ';
 				if(mb_substr ($activePosts [$i]->content, 0, 4 ) != "<p><") {
@@ -35,7 +35,7 @@
 		<?php
 		for($i = 3; $i < 5; $i ++) {
 			echo '<ul class="blog column column_1_2"> ';
-			echo '<li class="post"><a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
+			echo '<li class="post"><a href="?page=post&title=' . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
 			echo 'title="' . $activePosts [$i]->title . '"> <img style="height: 220px; width: 100%; object-fit: cover;" ';
 			if($activePosts[$i]->section == "18+")
 			{
@@ -44,7 +44,7 @@
 			echo 'src="' . $activePosts [$i]->path . '" alt="img"> ';
 			echo '</a> ';
 			echo '<h2 class="with_number"> ';
-			echo '<a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
+			echo '<a href="?page=post&title=' . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
 			echo 'title="' . $activePosts [$i]->title . '">' . $activePosts [$i]->title . '</a> ';
 			echo '</h2></li> ';
 			echo '</ul> ';
@@ -55,7 +55,7 @@
 			<ul class="blog medium">
 			<?php
 			for($i = 5; $i < 8; $i ++) {
-				echo '<li class="post"><a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
+				echo '<li class="post"><a href="?page=post&title=' . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
 				echo 'title="' . $activePosts [$i]->title . '"> <img ';
 				echo 'src="' . $activePosts [$i]->path . '"';
 				if($activePosts[$i]->section == "18+")
@@ -65,7 +65,7 @@
 				echo 'alt="img" style="height: 120px; width: 100%; object-fit: cover;"> ';
 				echo '</a> ';
 				echo '<h5> ';
-				echo '<a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" title="' . $activePosts [$i]->title . '">' . $activePosts [$i]->title . '</a> ';
+				echo '<a href="?page=post&title=' . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" title="' . $activePosts [$i]->title . '">' . $activePosts [$i]->title . '</a> ';
 				echo '</h5> ';
 				echo '<ul class="post_details simple"> ';
 				echo '<li class="category"><a href="?page=category&amp;cat=' . $activePosts [$i]->section . '" ';
@@ -81,7 +81,7 @@
 				<h4 class="box_header"><?php echo $activePosts [1]->section;?></h4>
 				<ul class="blog small_margin clearfix">
 					<li class="post"><a
-						href="<?php echo '?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [1]->id . '-' . str_replace ( ' ', '_', $activePosts [1]->title );?>"
+						href="<?php echo '?page=post&title=' . $activePosts [1]->id . '-' . str_replace ( ' ', '_', $activePosts [1]->title );?>"
 						title="<?php echo $activePosts [1]->title;?>"> <img
 							src="<?php echo $activePosts [1]->path;?>"
 							<?php
@@ -94,7 +94,7 @@
 					</a>
 						<div class="post_content">
 							<h5>
-								<a href="<?php echo '?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [1]->id . '-' . str_replace ( ' ', '_', $activePosts [1]->title );?>"
+								<a href="<?php echo '?page=post&title=' . $activePosts [1]->id . '-' . str_replace ( ' ', '_', $activePosts [1]->title );?>"
 									title="<?php echo $activePosts [1]->title;?>"><?php echo $activePosts [1]->title;?></a>
 							</h5>
 							<ul class="post_details simple">
@@ -112,7 +112,7 @@
 				break;
 			}
 			if ($activePosts [$i]->section == $activePosts [1]->section) {
-				echo '<li class="bullet style_1"><a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
+				echo '<li class="bullet style_1"><a href="?page=post&title=' . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
 				echo 'title="' . $activePosts [$i]->title . '">' . $activePosts [$i]->title . '</a></li> ';
 				$counter ++;
 			}
@@ -130,7 +130,7 @@
 				<h4 class="box_header"><?php echo $activePosts [$no]->section;?></h4>
 				<ul class="blog small_margin clearfix">
 					<li class="post"><a
-						href="<?php echo '?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$no]->id . '-' . str_replace ( ' ', '_', $activePosts [$no]->title );?>"
+						href="<?php echo '?page=post&title=' . $activePosts [$no]->id . '-' . str_replace ( ' ', '_', $activePosts [$no]->title );?>"
 						title="<?php echo $activePosts [$no]->title;?>"> <img
 						<?php 
 							if($activePosts[$no]->section == "18+")
@@ -143,7 +143,7 @@
 					</a>
 						<div class="post_content">
 							<h5>
-								<a href="<?php echo '?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$no]->id . '-' . str_replace ( ' ', '_', $activePosts [$no]->title );?>"
+								<a href="<?php echo '?page=post&title=' . $activePosts [$no]->id . '-' . str_replace ( ' ', '_', $activePosts [$no]->title );?>"
 									title="<?php echo $activePosts [$no]->title;?>"><?php echo $activePosts [$no]->title;?></a>
 							</h5>
 							<ul class="post_details simple">
@@ -161,7 +161,7 @@
 							break;
 						}
 						if ($activePosts [$i]->section == $activePosts [$no]->section) {
-							echo '<li class="bullet style_1"><a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
+							echo '<li class="bullet style_1"><a href="?page=post&title=' . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
 							echo 'title="' . $activePosts [$i]->title . '">' . $activePosts [$i]->title . '</a></li> ';
 							$counter ++;
 						}
@@ -184,7 +184,7 @@
 				
 				<?php
 				for($i = 10; $i < 20; $i ++) {
-					echo '<li class="post"><a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '"
+					echo '<li class="post"><a href="?page=post&title=' . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '"
 					title="' . $activePosts [$i]->title . '"> <img';
 					if($activePosts[$i]->section == "18+")
 					{
@@ -193,7 +193,7 @@
 						echo 'src="' . $activePosts [$i]->path . '" alt="img" style="height: 176px; width: 100%; object-fit: cover;">
 				</a>
 					<h5>
-						<a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '"
+						<a href="?page=post&title=' . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '"
 							title="' . $activePosts [$i]->title . '">' . $activePosts [$i]->title . '</a>
 					</h5>
 					<ul class="post_details simple">
@@ -212,7 +212,7 @@
 		<h4 class="box_header"><?php echo $activePosts[21]->section; ?></h4>
 		<ul class="blog">
 			<li class="post"><a
-				href="<?php echo '?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [21]->id . '-' . str_replace ( ' ', '_', $activePosts [21]->title );?>"
+				href="<?php echo '?page=post&title=' . $activePosts [21]->id . '-' . str_replace ( ' ', '_', $activePosts [21]->title );?>"
 				title="<?php echo $activePosts[21]->title; ?>"> <img
 					style="height: 250px; width: 100%; object-fit: cover;"
 					<?php 
@@ -224,7 +224,7 @@
 					src='<?php echo $activePosts[21]->path; ?>' alt='img'>
 			</a>
 				<h2 class="with_number" style="width: 100% !important;">
-					<a href="<?php echo '?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [21]->id . '-' . str_replace ( ' ', '_', $activePosts [21]->title );?>" style="width: 100% !important;"
+					<a href="<?php echo '?page=post&title=' . $activePosts [21]->id . '-' . str_replace ( ' ', '_', $activePosts [21]->title );?>" style="width: 100% !important;"
 						title="<?php echo $activePosts[21]->title; ?>">
 						<?php echo $activePosts[21]->title; ?></a>
 					<?php
@@ -246,7 +246,7 @@
 				 ?></p>
 				 
 				<a class="read_more"
-				href="<?php echo '?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [21]->id . '-' . str_replace ( ' ', '_', $activePosts [21]->title );?>"
+				href="<?php echo '?page=post&title=' . $activePosts [21]->id . '-' . str_replace ( ' ', '_', $activePosts [21]->title );?>"
 				title="Read more"><span class="arrow"></span><span>Повеке</span></a></li>
 		</ul>
 		<?php
@@ -293,7 +293,7 @@
 		<h4 class="box_header"><?php echo $activePosts[22]->section; ?></h4>
 		<ul class="blog">
 			<li class="post"><a
-				href="<?php echo '?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [22]->id . '-' . str_replace ( ' ', '_', $activePosts [22]->title ); ?>"
+				href="<?php echo '?page=post&title=' . $activePosts [22]->id . '-' . str_replace ( ' ', '_', $activePosts [22]->title ); ?>"
 				title="<?php echo $activePosts[22]->title;?>"> <img
 					style="height: 250px; width: 100%; object-fit: cover;"
 					<?php 
@@ -305,7 +305,7 @@
 					src='<?php echo $activePosts[22]->path; ?>' alt='img'>
 			</a>
 				<h2 class="with_number" style="width: 100% !important;">
-					<a href="<?php echo '?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [22]->id . '-' . str_replace ( ' ', '_', $activePosts [22]->title );?>" style="width: 100% !important;"
+					<a href="<?php echo '?page=post&title=' . $activePosts [22]->id . '-' . str_replace ( ' ', '_', $activePosts [22]->title );?>" style="width: 100% !important;"
 						title="<?php echo $activePosts[22]->title; ?>">
 						<?php echo $activePosts[22]->title; ?></a>
 					<?php
@@ -325,7 +325,7 @@
 				echo mb_substr($activePosts[22]->content, 0, 70); 
 				}?></p>
 				<a class="read_more"
-				href="<?php echo '?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [22]->id . '-' . str_replace ( ' ', '_', $activePosts [22]->title );?>"
+				href="<?php echo '?page=post&title=' . $activePosts [22]->id . '-' . str_replace ( ' ', '_', $activePosts [22]->title );?>"
 				title="Read more"><span class="arrow"></span><span>Повеке</span></a></li>
 		</ul>
 		<?php
@@ -379,7 +379,7 @@
 								break;
 							}
 							if( mb_strtolower($activePosts [$i]->section) == mb_strtolower($activePosts [0]->section)){
-			echo '<li class="post"><a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
+			echo '<li class="post"><a href="?page=post&title=' . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
 			echo 'title="' . $activePosts [$i]->title . '"> <img ';
 			echo 'src="' . $activePosts [$i]->path . '" style="height: 100px; width: 100px; object-fit: cover;" alt="img"';
 			if($activePosts[$i]->section == "18+")
@@ -388,7 +388,7 @@
 			}
 			echo '></a> ';
 			echo '<div class="post_content"><h5> ';
-			echo '<a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
+			echo '<a href="?page=post&title=' . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
 			echo 'title="' . $activePosts [$i]->title . '">' . $activePosts [$i]->title . '</a></h5><ul class="post_details simple"> ';
 			echo '<li class="category"><a href="?page=category&amp;cat=' . $activePosts [$i]->section . '" ';
 			echo 'title="' . $activePosts [$i]->section . '">' . $activePosts [$i]->section . '</a></li> ';

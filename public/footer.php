@@ -47,7 +47,7 @@
 						class="blog small vertical_carousel autoplay-1 scroll-1 navigation-1 easing-easeInOutQuint duration-750">
 												<?php
 			for($i = 0; $i < 10; $i ++) {
-				echo '<li class="post"><a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
+				echo '<li class="post"><a href="?page=post&title=' . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
 				echo 'title="' . $activePosts [$i]->title . '"> ';
 				echo '<img '; 
 				if($activePosts[$i]->section == "18+")
@@ -56,7 +56,7 @@
 				}
 				echo 'src="' . $activePosts [$i]->path . '"  style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height: 100px; width: 100px; object-fit: cover;" alt="img"></a>' ;
 				echo '<div class="post_content"><h5> ';
-				echo '<a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '"  ';
+				echo '<a href="?page=post&title=' . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '"  ';
 				echo 'title="' . $activePosts [$i]->title . '">' . $activePosts [$i]->title . '</a> </h5> ';
 				echo '<ul class="post_details simple"> ';
 				echo '<li class="category"><a href="?page=category&amp;cat=' . $activePosts [$i]->section . '" ';
@@ -79,10 +79,10 @@
 								break;
 							}
 							if( mb_strtolower($activePosts [$i]->section) == mb_strtolower('18+')){
-						echo '<li class="post"><a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
+						echo '<li class="post"><a href="?page=post&title=' . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
 						echo 'title="' . $activePosts [$i]->title . '"><img class="erotic-foggy" onmouseover="disableFoggy(this);" onmouseout="enableFoggy(this);"';
 						echo 'src="' . $activePosts [$i]->path . '" style="height: 242px; width: 330px; object-fit: cover;" alt="img"> </a> '; //330 x 242
-						echo '<h5 class="with_number"><a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
+						echo '<h5 class="with_number"><a href="?page=post&title=' . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
 						echo 'title="' . $activePosts [$i]->title . '">' . $activePosts [$i]->title . '</a> ';
 						//echo '<a class="comments_number" href="?page=post_gallery#comments_list" title="2 comments">2<span	class="arrow_comments"></span></a> ';
 						echo '</h5><ul class="post_details simple"> ';

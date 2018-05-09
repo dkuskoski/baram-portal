@@ -47,10 +47,10 @@
 							<?php
 							for($i = 0; $i < 8; $i ++) {
 								echo '<li class="post"> ';
-								echo '<a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" title="' . $activePosts [$i]->title . '"> ';
+								echo '<a href="?page=post&title=' . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" title="' . $activePosts [$i]->title . '"> ';
 								echo '<img style="height: 150px; object-fit: cover;" src="' . $activePosts [$i]->path . '" alt="img"> ';
 								echo '</a> ';
-								echo '<h5><a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" title="' . $activePosts [$i]->title . '">' . $activePosts [$i]->title . '</a></h5> ';
+								echo '<h5><a href="?page=post&title=' . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" title="' . $activePosts [$i]->title . '">' . $activePosts [$i]->title . '</a></h5> ';
 								echo '<ul class="post_details simple"> ';
 								echo '<li class="category"><a href="?page=category&amp;cat=' . $activePosts [$i]->section . '" title="' . $activePosts [$i]->section . '">' . $activePosts [$i]->section . '</a></li> ';
 								echo '<li class="date"> ';

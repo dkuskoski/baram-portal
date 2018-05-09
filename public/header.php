@@ -298,7 +298,7 @@ document.getElementById('fb-root2').appendChild(e);
 							<ul class="latest_news_scrolling_list">
 							<?php
 							for($i = 0; $i < 10; $i ++) {
-								echo '<li><a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" title="">' . mb_substr($activePosts [$i]->title, 0, 50) . '...</a></li> ';
+								echo '<li><a href="?page=post&title=' . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" title="">' . mb_substr($activePosts [$i]->title, 0, 50) . '...</a></li> ';
 							}
 							?>
 							</ul>

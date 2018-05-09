@@ -4,14 +4,14 @@
 
 	<?php 
 	for($i = 25; $i < 28; $i ++) {
-		echo '<li class="post"><a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
+		echo '<li class="post"><a href="?page=post&title=' . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
 		echo 'title="' . $activePosts [$i]->title . '"> <span class="icon gallery"></span> <img style="height: 142px; width: 100%; object-fit: cover;"';
 		if($activePosts[$i]->section == "18+")
 		{
 			echo ' class="erotic-foggy" onmouseover="disableFoggy(this);" onmouseout="enableFoggy(this);" ';
 		}
 		echo 'src="' . $activePosts [$i]->path . '" alt="img"> </a> <div class="post_content"><h5> ';
-		echo '<a href="?page=post&title=' . rand ( 10000, 99999 ) . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
+		echo '<a href="?page=post&title=' . $activePosts [$i]->id . '-' . str_replace ( ' ', '_', $activePosts [$i]->title ) . '" ';
 		echo 'title="' . $activePosts [$i]->title . '">' . $activePosts [$i]->title . '</a></h5> ';
 		echo '<ul class="post_details simple"><li class="category"><a href="?page=category&amp;cat=' . $activePosts [$i]->section . '" ';
 		echo 'title="' . $activePosts [$i]->section . '">' . $activePosts [$i]->section . '</a></li>';
@@ -103,7 +103,7 @@
 		<h4 class="box_header">Најгледано</h4>
 		<div id="sidebar-most-read">
 			<ul class="blog rating page_margin_top clearfix">
-				<li class="post"><a href="<?php echo '?page=post&title=' . rand ( 10000, 99999 ) . $mostViewed [0]->id . '-' . str_replace ( ' ', '_', $mostViewed [0]->title ); ?>"
+				<li class="post"><a href="<?php echo '?page=post&title=' . $mostViewed [0]->id . '-' . str_replace ( ' ', '_', $mostViewed [0]->title ); ?>"
 					title="<?php echo $mostViewed [0]->title;?>"> <img
 						src='<?php echo $mostViewed [0]->path;?>' style="height: 152px; width: 100%; object-fit: cover;"
 						<?php 
@@ -117,7 +117,7 @@
 					<div class="post_content">
 						<span class="number animated_element" data-value="<?php echo $mostViewed [0]->views;?>"></span>
 						<h5>
-							<a href="<?php echo '?page=post&title=' . rand ( 10000, 99999 ) . $mostViewed [0]->id . '-' . str_replace ( ' ', '_', $mostViewed [0]->title ); ?>"
+							<a href="<?php echo '?page=post&title=' . $mostViewed [0]->id . '-' . str_replace ( ' ', '_', $mostViewed [0]->title ); ?>"
 								title="<?php echo $mostViewed [0]->title;?>"><?php echo $mostViewed [0]->title;?></a>
 						</h5>
 						<ul class="post_details simple">
@@ -130,7 +130,7 @@
 					for ($i = 1; $i < 5; $i++){
 				echo '<li class="post">	<div class="post_content">';
 				echo '<span class="number animated_element" data-value="' . $mostViewed[$i]->views . '"></span><h5>';
-				echo '<a href="?page=post&title=' . rand ( 10000, 99999 ) . $mostViewed [$i]->id . '-' . str_replace ( ' ', '_', $mostViewed [$i]->title) . '" ';
+				echo '<a href="?page=post&title=' . $mostViewed [$i]->id . '-' . str_replace ( ' ', '_', $mostViewed [$i]->title) . '" ';
 				echo 'title="' . $mostViewed[$i]->title . '">' . $mostViewed[$i]->title . '</a></h5>';
 			    echo '<ul class="post_details simple">';
 				echo '<li class="category"><a href="?page=category&amp;cat=' . $mostViewed[$i]->section . '" ';
