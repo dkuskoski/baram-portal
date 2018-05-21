@@ -35,18 +35,21 @@ class PostDAO implements PostInterface {
 	}
 
 	function getMostViewed($count){
-		$items = DB::select("select * from posts where status = 1 order by views desc limit " . $count);
+		$items = DB::table("posts")->where("status", 1)->orderBy("views", "DESC")->take($count)->get();
+		// $items = DB::select("select * from posts where status = 1 order by views desc limit " . $count);
 		return $items;
 	}
 
 	function getBySection($section, $end, $search){
-		$start = $end - 6;
+		$start = intval($end) - 6;
 		$items = null;
 
 		if($_GET['cat'] != "search"){
-			$items = DB::select("SELECT * FROM posts WHERE section = '" . $section . "' and status = 1 order by created_at desc limit " . $end . ' offset ' . $start);
+			$items = DB::table("posts")->where("section", $section)->where("status", 1)->orderBy("created_at", "DESC")->skip($start)->take(intval($end) -intval($start))->get();
+			// $items = DB::select("SELECT * FROM posts WHERE section = '" . $section . "' and status = 1 order by created_at desc limit " . $end . ' offset ' . $start);
 		} else {
-			$items = DB::select("SELECT * FROM posts WHERE status = 1 and section like '%" . $search . "%' or content like '%" . $search . "%' or title like '%" . $search . "%' order by created_at desc limit " . $end . ' offset ' . $start);
+			$items = DB::table("posts")->where("status", 1)->where("section", "like", "%". $search . "%")->orWhere("title", "like", "%". $search . "%")->orWhere("content", "like", "%". $search . "%")->orderBy("created_at", "DESC")->skip($start)->take(intval($end) -intval($start))->get();
+			// $items = DB::select("SELECT * FROM posts WHERE status = 1 and section like '%" . $search . "%' or content like '%" . $search . "%' or title like '%" . $search . "%' order by created_at desc limit " . $end . ' offset ' . $start);
 		}
 		return $items;
 	}

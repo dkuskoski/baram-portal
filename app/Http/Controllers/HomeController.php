@@ -40,7 +40,6 @@ class HomeController extends Controller {
 					$this->postService->updatePostViews($id, $post->views);
 					$post->views = $post->views + 1;
 				}
-				
 			}
 			if($_GET['page'] == 'category'){
 				$cat = $_GET['cat'];

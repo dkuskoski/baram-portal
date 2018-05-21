@@ -20,12 +20,12 @@ class RESTController extends Controller {
 
     public function getActivePosts() {
         $activePosts = $this->postService->getActivePosts();
-        return response()->json(json_encode($activePosts), 200);
+        return response()->json($activePosts, 200);
     }
 
     public function getMostViewed() {
         $mostViewed = $this->postService->getMostViewed($_GET['count']);
-        return response()->json(json_encode($mostViewed), 200);
+        return response()->json($mostViewed, 200);
     }
 
     public function getPost() {
@@ -36,7 +36,7 @@ class RESTController extends Controller {
             $this->postService->updatePostViews($id, $post->views);
             $post->views = $post->views + 1;
         }
-        return response()->json(json_encode($post), 200);
+        return response()->json($post, 200);
     }
 
     public function getPosts(){
@@ -49,20 +49,6 @@ class RESTController extends Controller {
 			$search = $_GET['search'];
 		}
 		$categoryPosts = $this->postService->getBySection($cat, $_GET['count'], $search);
-		return response()->json(json_encode($categoryPosts), 200);
+		return response()->json($categoryPosts, 200);
 	}
-
-    // public function getCategory() {
-    //     $cat = $_GET['cat'];
-	// 			if($cat == 18){
-	// 				$cat = "18+";
-	// 			}
-	// 			$search = null;
-	// 			if(isset($_GET['search']) && $cat) {
-	// 				$search = $_GET['search'];
-	// 			}	
-	// 			 $categoryPostsCount = $this->postService->getCountBySection($cat, $search);
-	// 			$categoryPosts = $this->postService->getBySection($cat, 6, $search);
-    //     return response()->json(json_encode($categoryPosts), 200);
-    // }
 }
