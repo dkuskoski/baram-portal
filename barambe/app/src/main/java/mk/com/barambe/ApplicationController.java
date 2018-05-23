@@ -5,6 +5,8 @@ import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 
 import com.google.gson.Gson;
+import com.squareup.picasso.OkHttp3Downloader;
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 
@@ -29,6 +31,13 @@ public class ApplicationController extends Application {
         gson = new Gson();
         Retrofit retrofit = createRetrofitInstance();
         apiInterface = retrofit.create(ApiInterface.class);
+
+        Picasso.Builder builder = new Picasso.Builder(this);
+        builder.downloader(new OkHttp3Downloader(this,Integer.MAX_VALUE));
+        Picasso built = builder.build();
+        built.setIndicatorsEnabled(false);
+        built.setLoggingEnabled(false);
+        Picasso.setSingletonInstance(built);
     }
 
     private Retrofit createRetrofitInstance() {

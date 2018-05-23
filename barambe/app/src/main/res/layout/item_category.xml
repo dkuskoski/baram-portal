@@ -2,7 +2,6 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:background="@android:color/white"
     android:layout_margin="@dimen/small_margin">
 
@@ -18,7 +17,8 @@
             android:id="@+id/item_category_iv"
             android:adjustViewBounds="true"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/small_margin"/>
         <TextView
             android:id="@+id/item_category_title"
             android:layout_width="match_parent"

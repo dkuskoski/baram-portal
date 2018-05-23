@@ -27,8 +27,8 @@
             android:theme="@android:style/Theme.Translucent" />
         <activity
             android:name=".activity.MainActivity"
-            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity android:name=".activity.PostActivity"/>
     </application>
 
 </manifest>

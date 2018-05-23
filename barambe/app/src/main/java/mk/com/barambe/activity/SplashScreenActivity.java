@@ -5,17 +5,14 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
-import com.google.gson.Gson;
 
 import java.util.List;
 
 import mk.com.barambe.ApplicationController;
-import mk.com.barambe.BaramConstants;
 import mk.com.barambe.R;
 import mk.com.barambe.Storage;
 import mk.com.barambe.model.Post;
@@ -33,8 +30,6 @@ public class SplashScreenActivity extends AppCompatActivity {
     private boolean adExpired;
     private boolean dataFetched;
     private boolean mostViewedFetched;
-    private List<Post> mostViewed;
-    private List<Post> data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +58,6 @@ public class SplashScreenActivity extends AppCompatActivity {
                 if (response.isSuccessful() && response.body() != null) {
                     dataFetched = true;
                     Storage.saveActivePosts(response.body());
-                    data = response.body();
                     goToNextLevel();
                 } else {
                     // TODO show error
@@ -77,7 +71,7 @@ public class SplashScreenActivity extends AppCompatActivity {
             }
         });
 
-        ApplicationController.getApiInterface().getMostViewed(20)
+        ApplicationController.getApiInterface().getMostViewed(100)
                 .enqueue(new Callback<List<Post>>() {
                     @Override
                     public void onResponse(@NonNull Call<List<Post>> call,
@@ -85,7 +79,6 @@ public class SplashScreenActivity extends AppCompatActivity {
                         if (response.isSuccessful() && response.body() != null) {
                             mostViewedFetched = true;
                             Storage.saveMostViewed(response.body());
-                            mostViewed = response.body();
                             goToNextLevel();
                         } else {
                             // TODO show error

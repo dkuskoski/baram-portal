@@ -17,10 +17,11 @@ public class BaramConstants {
     public final static String ADULT = "18+";
     public static final String API_USERNAME = "dkuskoski@hotmail.com";
     public static final String API_PASSWORD = "dare123";
-    public static final String MOST_VIEWED = "mostViewed";
+    public static final String MOST_VIEWED = "Најгледано";
+    public static final String POST = "post";
 
     public static List<String> getCategories(){
         return Arrays.asList(HOME, MAKEDONIJA, EKONOMIJA, SVET,
-                HRONIKA, SPORT, ZABAVA, KULTURA, ADULT);
+                HRONIKA, SPORT, ZABAVA, KULTURA, MOST_VIEWED, ADULT);
     }
 }
